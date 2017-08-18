@@ -5,5 +5,6 @@
 (exec-path-from-shell-copy-env "SSH_AUTH_SOCK")
 
 (require 'better-defaults)
+(require 'mingus-stays-home)
 
 
