@@ -9,6 +9,10 @@
 	     '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
+;; Get the package list from package.el
+;; custom.el is updated automatically but isn't tracked in git
+(load "~/.emacs.d/package.el")
+
 ;; Install all my packages
 (package-install-selected-packages)
 
