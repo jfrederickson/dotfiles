@@ -12,7 +12,10 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#eeeeee"
+    background_color = "#282828"
+    background_darkness = 0.9
+    background_type = transparent
     cursor_color = "#25C3DC"
-    foreground_color = "#3c3c3b"
+    foreground_color = "#ebdbb2"
     palette = "#f8f8f8:#d7005f:#718c00:#ff8f01:#005f87:#6a1e9a:#3e999f:#2c2c2c:#2c2c2c:#ef5251:#90c94d:#ffa000:#4271ae:#c774c1:#3e999f:#f5f5f5"
+    show_titlebar = False
