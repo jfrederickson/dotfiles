@@ -14,6 +14,9 @@ set $mod Mod4
 hide_edge_borders smart
 new_window pixel 1
 
+gaps inner 10
+gaps outer 5
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
