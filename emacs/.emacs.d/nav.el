@@ -32,7 +32,7 @@
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 
 ;; Magit keybindings
-(global-set-key (kbd "C-c g") 'magit-status)
+(global-set-key (kbd "C-c g s") 'magit-status)
 
 ;;; scroll one line at a time (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 1))) ;; two lines at a time
