@@ -172,10 +172,13 @@ exec dunst
 exec compton
 exec mopidy
 exec pnmixer
-exec gnome-screensaver
+#exec gnome-screensaver
+exec xscreensaver
+exec xss-lock -- xscreensaver-command -lock
 exec nm-applet
 exec xmodmap ~/.Xmodmap
 exec guake
 
-bindsym $mod+L exec gnome-screensaver-command -l
+#bindsym $mod+L exec gnome-screensaver-command -l
+bindsym $mod+L exec xscreensaver-command -lock
 bindsym Print exec xfce4-screenshooter
