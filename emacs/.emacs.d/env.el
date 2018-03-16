@@ -2,7 +2,10 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
+(exec-path-from-shell-initialize)
+
 (exec-path-from-shell-copy-env "SSH_AUTH_SOCK")
+;;(setenv "SSH_AUTH_SOCK" (shell-command-to-string "gpgconf --list-dir agent-ssh-socket"))
 
 (require 'better-defaults)
 (require 'mingus-stays-home)
