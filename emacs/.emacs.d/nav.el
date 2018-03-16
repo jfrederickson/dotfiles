@@ -38,3 +38,10 @@
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 1))) ;; two lines at a time
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+
+;; Quickly switch between windows without the mouse
+(global-set-key (kbd "C-.") #'other-window)
+(global-set-key (kbd "C-,") #'prev-window)
+(defun prev-window ()
+  (interactive)
+  (other-window -1))
