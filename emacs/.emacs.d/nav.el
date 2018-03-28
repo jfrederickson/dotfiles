@@ -45,3 +45,7 @@
 (defun prev-window ()
   (interactive)
   (other-window -1))
+
+(when (eq system-type 'darwin) ;; mac specific settings
+  (setq mac-option-modifier 'meta)
+  (setq mac-command-modifier 'super))
