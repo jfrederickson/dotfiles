@@ -31,8 +31,25 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 
+;; Dash keybindings
+(global-set-key (kbd "C-x ?") 'helm-dash)
+(global-set-key (kbd "C-x /") 'helm-dash-at-point)
+
 ;; Magit keybindings
 (global-set-key (kbd "C-c g s") 'magit-status)
+
+;; Mingus keybindings
+(global-set-key (kbd "C-x p") 'mingus-toggle)
+(global-set-key (kbd "C-x \\") 'mingus-next)
+
+;; Org-Mode keybindings
+(global-set-key (kbd "C-c c") 'org-capture)
+
+;; Avy keybindings
+(global-set-key (kbd "C-c j") 'avy-goto-word-or-subword-1)
+(global-set-key (kbd "s-w") 'ace-window)
+(global-set-key (kbd "C-:") 'avy-goto-char)
+(global-set-key (kbd "C-'") 'avy-goto-char-2)
 
 ;;; scroll one line at a time (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 1))) ;; two lines at a time
