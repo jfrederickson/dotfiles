@@ -10,6 +10,7 @@
 (require 'better-defaults)
 (require 'mingus-stays-home)
 
+(projectile-mode)
 
 ;; Window transparency
 (set-frame-parameter (selected-frame) 'alpha '(90 . 90))
