@@ -37,6 +37,7 @@
 
 ;; Magit keybindings
 (global-set-key (kbd "C-c g s") 'magit-status)
+(global-set-key (kbd "C-c g b") 'magit-blame)
 
 ;; Mingus keybindings
 (global-set-key (kbd "C-x p") 'mingus-toggle)
