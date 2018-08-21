@@ -30,6 +30,7 @@
 ;; Helm keybindings
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 ;; Dash keybindings
 (global-set-key (kbd "C-x ?") 'helm-dash)
@@ -38,6 +39,7 @@
 ;; Magit keybindings
 (global-set-key (kbd "C-c g s") 'magit-status)
 (global-set-key (kbd "C-c g b") 'magit-blame)
+(global-set-key (kbd "C-c g l") 'git-link)
 
 ;; Mingus keybindings
 (global-set-key (kbd "C-x p") 'mingus-toggle)
@@ -45,6 +47,10 @@
 
 ;; Org-Mode keybindings
 (global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c a") 'org-agenda)
+
+;; Elfeed keybindings
+(global-set-key (kbd "C-c f") 'elfeed)
 
 ;; Avy keybindings
 (global-set-key (kbd "C-c j") 'avy-goto-word-or-subword-1)
@@ -63,6 +69,15 @@
 (defun prev-window ()
   (interactive)
   (other-window -1))
+
+;; Make a new eshell buffer (equivalent to C-u M-x eshell)
+(defun new-eshell ()
+  (interactive)
+  (let ((current-prefix-arg '(4)))
+    (call-interactively 'eshell)))
+
+;; Make a new eshell frame
+(global-set-key (kbd "s-n") (lambda () (interactive) (select-frame (make-frame)) (funcall #'new-eshell)))
 
 (when (eq system-type 'darwin) ;; mac specific settings
   (setq mac-option-modifier 'meta)
