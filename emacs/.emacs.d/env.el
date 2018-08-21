@@ -14,7 +14,7 @@
 (projectile-mode)
 
 ;; Enable my common docsets in helm-dash
-(setq helm-dash-docsets '("SaltStack" "Kubernetes"))
+(setq helm-dash-docsets '("SaltStack" "Kubernetes" "Python 3"))
 
 ;; Set up org-mode the way I want it
 (setq org-directory "~/org")
