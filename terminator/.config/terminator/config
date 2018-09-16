@@ -1,6 +1,7 @@
 [global_config]
   focus = system
 [keybindings]
+  broadcast_group = <Primary><Shift>i
 [layouts]
   [[default]]
     [[[child1]]]
