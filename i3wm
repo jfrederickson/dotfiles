@@ -166,6 +166,7 @@ bindsym $mod+r mode "resize"
 #        }
 #}
 
+exec setxkbmap -layout us -option ctrl:nocaps
 #exec feh --bg-fill /home/jon/Pictures/wallpapers/3-Chantilly.jpg
 #exec feh --bg-fill /home/jon/Pictures/wallpapers/signal-2016-06-12-150356.jpg
 exec feh --bg-fill /home/jon/Pictures/wallpapers/ima_6e7bcfc.jpeg
@@ -175,7 +176,7 @@ exec polybar -c ~/.config/polybar/config top
 exec mopidy
 exec pnmixer
 #exec gnome-screensaver
-exec xscreensaver
+exec xscreensaver -no-splash
 exec xss-lock -- xscreensaver-command -lock
 exec nm-applet
 exec xmodmap ~/.Xmodmap
