@@ -1,6 +1,10 @@
 ;; Powerline
-(require 'powerline)
-(powerline-default-theme)
+;;(require 'powerline)
+;;(powerline-default-theme)
+
+;; Modeline
+(require 'doom-modeline)
+(doom-modeline-init)
 
 ;; Theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
