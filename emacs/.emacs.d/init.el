@@ -27,3 +27,9 @@
 
 ;; Keybindings and navigation
 (load "~/.emacs.d/nav.el")
+
+;; Linode-specific configs
+;;(load "~/.emacs.d/linode.el")
+(let ((linode-config "~/.emacs.d/linode.el"))
+  (when (file-exists-p linode-config)
+    (load linode-config)))
