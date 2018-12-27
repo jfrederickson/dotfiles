@@ -39,7 +39,14 @@
 ;; Magit keybindings
 (global-set-key (kbd "C-c g s") 'magit-status)
 (global-set-key (kbd "C-c g b") 'magit-blame)
+(global-set-key (kbd "C-c g c") 'magit-clone)
 (global-set-key (kbd "C-c g l") 'git-link)
+(global-set-key (kbd "C-c <") 'smerge-keep-mine)
+(global-set-key (kbd "C-c >") 'smerge-keep-other)
+(global-set-key (kbd "C-c n") 'smerge-next)
+
+;; Search for stuff
+(global-set-key (kbd "C-c s") 'ag)
 
 ;; Mingus keybindings
 (global-set-key (kbd "C-x p") 'mingus-toggle)
