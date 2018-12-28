@@ -85,6 +85,8 @@
 
 ;; Make a new eshell frame
 (global-set-key (kbd "s-n") (lambda () (interactive) (select-frame (make-frame)) (funcall #'new-eshell)))
+;; Start a new terminal
+(global-set-key (kbd "C-x t") 'ansi-term)
 
 (when (eq system-type 'darwin) ;; mac specific settings
   (setq mac-option-modifier 'meta)
