@@ -32,6 +32,7 @@
    "unzip"
    "tinc"
    "bind:utils"
+   "fprintd"
    ;;# Desktop
    "gnome-tweaks"
    "gnome-calendar"
