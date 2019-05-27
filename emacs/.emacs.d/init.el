@@ -2,6 +2,8 @@
 
 ;; Custom variables
 (setq custom-file "~/.emacs.d/custom.el")
+(when (not (file-exists-p custom-file))
+  (with-temp-buffer (write-file custom-file)))
 (load custom-file)
 
 (require 'package)
