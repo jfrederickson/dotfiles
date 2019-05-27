@@ -1,0 +1,6 @@
+[user]
+	email = jonathan@terracrypt.net
+	name = Jonathan Frederickson
+        signingkey = 7A53BC6EEDD70AA4E7D8C54243B0279E2936E864
+[commit]
+        gpgsign = true
