@@ -9,7 +9,8 @@
 ;; Theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 ;;(load-theme 'material)
-(load-theme 'gruvbox)
+;;(load-theme 'gruvbox)
+(load-theme 'sourcerer)
 ;;(load-theme 'flatui)
 ;;(load-theme 'tron)
 
