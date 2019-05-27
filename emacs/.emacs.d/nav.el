@@ -65,6 +65,11 @@
 (global-set-key (kbd "C-:") 'avy-goto-char)
 (global-set-key (kbd "C-'") 'avy-goto-char-2)
 
+;; Pass keybindings
+(global-set-key (kbd "C-c p c") 'password-store-copy)
+(global-set-key (kbd "C-c p g") 'password-store-generate)
+(global-set-key (kbd "C-c p e") 'password-store-edit)
+
 ;;; scroll one line at a time (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 1))) ;; two lines at a time
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
