@@ -1,4 +1,7 @@
-(setq package-selected-packages (append package-selected-packages '(git-link json-mode gruvbox-theme groovy-mode mingus salt-mode smooth-scroll xkcd neotree markdown-mode pianobar exec-path-from-shell jedi floobits ein virtualenvwrapper matrix-client jabber magit tagedit rainbow-delimiters projectile ido-ubiquitous cider clojure-mode-extra-font-locking clojure-mode paredit elpy material-theme powerline helm better-defaults helm-dash quelpa quelpa-use-package ledger-mode js2-mode doom-modeline all-the-icons org-jira)))
+(use-package quelpa
+  :ensure t)
+(use-package quelpa-use-package
+  :ensure t)
 
 (require 'quelpa-use-package)
 
@@ -6,8 +9,63 @@
   :quelpa ((matrix-client :fetcher github :repo "jgkamat/matrix-client-el"
                           :files (:defaults "logo.png" "matrix-client-standalone.el.sh"))))
 
-(require 'js2-mode)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-
-;; Better imenu
-(add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
+(use-package git-link
+  :ensure t)
+(use-package json-mode
+  :ensure t)
+(use-package sourcerer-theme
+  :ensure t)
+(use-package groovy-mode
+  :ensure t)
+(use-package salt-mode
+  :ensure t)
+(use-package smooth-scroll
+  :ensure t)
+(use-package neotree
+  :ensure t)
+(use-package markdown-mode
+  :ensure t)
+(use-package exec-path-from-shell
+  :ensure t)
+(use-package jedi
+  :ensure t)
+(use-package floobits
+  :ensure t)
+(use-package ein
+  :ensure t)
+(use-package virtualenvwrapper
+  :ensure t)
+(use-package jabber
+  :ensure t)
+(use-package magit
+  :ensure t)
+(use-package rainbow-delimiters
+  :ensure t)
+(use-package projectile
+  :ensure t)
+(use-package ido-completing-read+
+  :ensure t)
+(use-package cider
+  :ensure t)
+(use-package clojure-mode-extra-font-locking
+  :ensure t)
+(use-package clojure-mode
+  :ensure t)
+(use-package paredit
+  :ensure t)
+(use-package elpy
+  :ensure t)
+(use-package helm
+  :ensure t)
+(use-package better-defaults
+  :ensure t)
+(use-package helm-dash
+  :ensure t)
+(use-package ledger-mode
+  :ensure t)
+(use-package doom-modeline
+  :ensure t)
+(use-package all-the-icons
+  :ensure t)
+(use-package org-jira
+  :ensure t)
