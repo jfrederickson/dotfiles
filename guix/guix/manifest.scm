@@ -31,6 +31,7 @@
    "atool"
    "unzip"
    "tinc"
+   "bind:utils"
    ;;# Desktop
    "gnome-tweaks"
    "gnome-calendar"
