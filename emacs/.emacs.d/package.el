@@ -69,3 +69,5 @@
   :ensure t)
 (use-package org-jira
   :ensure t)
+(use-package ag
+  :ensure t)
