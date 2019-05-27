@@ -49,8 +49,8 @@
 (global-set-key (kbd "C-c s") 'ag)
 
 ;; Mingus keybindings
-(global-set-key (kbd "C-x p") 'mingus-toggle)
-(global-set-key (kbd "C-x \\") 'mingus-next)
+;;(global-set-key (kbd "C-x p") 'mingus-toggle)
+;;(global-set-key (kbd "C-x \\") 'mingus-next)
 
 ;; Org-Mode keybindings
 (global-set-key (kbd "C-c c") 'org-capture)

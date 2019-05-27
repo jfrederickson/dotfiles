@@ -8,7 +8,6 @@
 ;;(setenv "SSH_AUTH_SOCK" (shell-command-to-string "gpgconf --list-dir agent-ssh-socket"))
 
 (require 'better-defaults)
-(require 'mingus-stays-home)
 
 ;; Enable project awareness
 (projectile-mode)
