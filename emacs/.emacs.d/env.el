@@ -30,8 +30,8 @@
          "* %?\nEntered on %U\n  %i\n  %a")))
 
 ;; Window transparency
-(set-frame-parameter (selected-frame) 'alpha '(90 . 90))
-(add-to-list 'default-frame-alist '(alpha . (90 . 90)))
+;;(set-frame-parameter (selected-frame) 'alpha '(90 . 90))
+;;(add-to-list 'default-frame-alist '(alpha . (90 . 90)))
 
 (defun toggle-transparency ()
   (interactive)
