@@ -8,6 +8,10 @@
 (use-package matrix-client
   :quelpa ((matrix-client :fetcher github :repo "jgkamat/matrix-client-el"
                           :files (:defaults "logo.png" "matrix-client-standalone.el.sh"))))
+(use-package xterm-color
+  :ensure t)
+(use-package rmoo
+  :quelpa ((rmoo :fetcher github :repo "lisdude/rmoo")))
 
 (use-package git-link
   :ensure t)
