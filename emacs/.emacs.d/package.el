@@ -6,8 +6,11 @@
 (require 'quelpa-use-package)
 
 (use-package matrix-client
-  :quelpa ((matrix-client :fetcher github :repo "jgkamat/matrix-client-el"
+  :quelpa ((matrix-client :fetcher github :repo "alphapapa/matrix-client-el"
                           :files (:defaults "logo.png" "matrix-client-standalone.el.sh"))))
+
+(use-package sunrise-commander
+  :quelpa (sunrise-commander :fetcher github :repo "escherdragon/sunrise-commander"))
 
 (use-package git-link
   :ensure t)
@@ -70,4 +73,6 @@
 (use-package org-jira
   :ensure t)
 (use-package ag
+  :ensure t)
+(use-package multiple-cursors
   :ensure t)
