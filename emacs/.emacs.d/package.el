@@ -8,6 +8,10 @@
 (use-package matrix-client
   :quelpa ((matrix-client :fetcher github :repo "alphapapa/matrix-client-el"
                           :files (:defaults "logo.png" "matrix-client-standalone.el.sh"))))
+(use-package xterm-color
+  :ensure t)
+(use-package rmoo
+  :quelpa ((rmoo :fetcher github :repo "lisdude/rmoo")))
 
 (use-package sunrise-commander
   :quelpa (sunrise-commander :fetcher github :repo "escherdragon/sunrise-commander"))
@@ -75,4 +79,6 @@
 (use-package ag
   :ensure t)
 (use-package multiple-cursors
+  :ensure t)
+(use-package hyperbole
   :ensure t)
