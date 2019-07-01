@@ -35,6 +35,7 @@
    "tinc"
    "bind:utils"
    "fprintd"
+   "nss-certs"
    ;;# Desktop
    "gnome-tweaks"
    "gnome-calendar"
@@ -52,6 +53,7 @@
    "jami-client-gnome"
    "dbus"
    "font-google-noto"
+   "font-ibm-plex"
    "vlc"
    "toot"
    ;; Media
