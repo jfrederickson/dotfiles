@@ -42,6 +42,7 @@
    "openjdk"
    "java-swt"
    "fontconfig"
+   "nss-certs"
    ;;# Desktop
    "gnome-tweaks"
    "gnome-calendar"
@@ -67,6 +68,7 @@
    "font-liberation"
    "font-lato"
    "font-awesome"
+   "font-ibm-plex"
    "vlc"
    "toot"
    "mu"

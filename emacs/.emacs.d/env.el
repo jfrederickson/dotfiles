@@ -50,4 +50,11 @@
   (interactive "nTransparency Value 0 - 100 opaque:")
   (set-frame-parameter (selected-frame) 'alpha value))
 
-;;(add-to-list 'debbugs-gnu-all-packages "guix-patches")
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (shell . t)
+   (python . t)
+   ))
+
+(add-to-list 'debbugs-gnu-all-packages "guix-patches")
