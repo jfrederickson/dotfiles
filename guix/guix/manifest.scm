@@ -57,6 +57,8 @@
    "flatpak"
    "dino"
    "pavucontrol"
+   "arc-theme"
+   "arc-icon-theme"
    ;;"evolution"
    ;;"evolution-data-server"
    "gpodder"
