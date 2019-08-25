@@ -1,6 +1,6 @@
 (specifications->manifest
  '("glibc-utf8-locales"
-   ;;# Dotfiles management
+   ;;Dotfiles management
    "stow"
    "rofi"
    "gnupg"
@@ -10,7 +10,7 @@
    "emacs-use-package"
    "pcsc-lite"
    "opensc"
-   ;;# Hacking
+   ;;Hacking
    "emacs"
    "emacs-debbugs"
    "git"
@@ -21,7 +21,7 @@
    "emacs-emojify"
    "glade"
    "racket"
-   ;;# Devops
+   ;;Devops
    "docker"
    "docker-cli"
    "docker-compose"
@@ -43,6 +43,11 @@
    "java-swt"
    "fontconfig"
    "nss-certs"
+   ;; Messaging
+   "mu"
+   "quaternion"
+   "toot"
+   "dino"
    ;;# Desktop
    "gnome-tweaks"
    "gnome-calendar"
@@ -55,30 +60,27 @@
    "inkscape"
    "luakit"
    "flatpak"
-   "dino"
-   "pavucontrol"
+
+
    "arc-theme"
    "arc-icon-theme"
-   ;;"evolution"
-   ;;"evolution-data-server"
-   "gpodder"
-   "shotwell"
-   ;;"jami-client-gnome"
    "dbus"
+   ;; Fonts
    "font-google-noto"
    "font-terminus"
    "font-liberation"
    "font-lato"
    "font-awesome"
    "font-ibm-plex"
-   "vlc"
-   "toot"
-   "mu"
    ;; Media
+   "vlc"
+   "pavucontrol"
    "gst-plugins-bad"
    "gst-plugins-base"
    "gst-plugins-good"
    "gst-plugins-ugly"
+   "gpodder"
+   "shotwell"
    ;; Gaming
    "tintin++"
    "powwow"))
