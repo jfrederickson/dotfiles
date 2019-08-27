@@ -13,15 +13,20 @@
    ;;# Hacking
    "emacs"
    "emacs-debbugs"
+   "emacs-zones"
    "git"
    "git:send-email"
    "guile@2.2"
+   "guile-git"
+   "autoconf"
    "font-adobe-source-code-pro"
    "emacs-guix"
    "emacs-emojify"
    "glade"
    "racket"
-   ;;# Devops
+   ;; Blogging
+   "haunt"
+   ;; Devops
    "docker"
    "docker-cli"
    "docker-compose"
@@ -79,6 +84,8 @@
    "gst-plugins-base"
    "gst-plugins-good"
    "gst-plugins-ugly"
+   ;; Fun
+   "emacs-ascii-art-to-unicode"
    ;; Gaming
    "tintin++"
    "powwow"))
