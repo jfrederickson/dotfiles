@@ -21,6 +21,9 @@
    "emacs-emojify"
    "glade"
    "racket"
+   "python-virtualenv"
+   "emacs-jedi"
+   "python-jedi"
    ;;Devops
    "docker"
    "docker-cli"
