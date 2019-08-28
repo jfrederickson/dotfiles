@@ -82,3 +82,5 @@
   :ensure t)
 (use-package hyperbole
   :ensure t)
+(use-package nginx-mode
+  :ensure t)
