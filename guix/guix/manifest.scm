@@ -13,9 +13,12 @@
    ;;Hacking
    "emacs"
    "emacs-debbugs"
+   "emacs-zones"
    "git"
    "git:send-email"
    "guile@2.2"
+   "guile-git"
+   "autoconf"
    "font-adobe-source-code-pro"
    "emacs-guix"
    "emacs-emojify"
@@ -24,7 +27,9 @@
    "python-virtualenv"
    "emacs-jedi"
    "python-jedi"
-   ;;Devops
+   ;; Blogging
+   "haunt"
+   ;; Devops
    "docker"
    "docker-cli"
    "docker-compose"
@@ -84,6 +89,8 @@
    "gst-plugins-ugly"
    "gpodder"
    "shotwell"
+   ;; Fun
+   "emacs-ascii-art-to-unicode"
    ;; Gaming
    "tintin++"
    "powwow"))
