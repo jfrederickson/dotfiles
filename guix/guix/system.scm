@@ -5,6 +5,7 @@
 (use-modules (gnu) (gnu system nss)
              (gnu packages linux)
              (gnu packages xdisorg)
+             (gnu packages package-management)
              (gnu services xorg)
              (gnu services authentication)
              (gnu services security-token)
@@ -48,7 +49,8 @@
                 (name "jfred")
                 (group "users")
                 (supplementary-groups '("wheel" "netdev"
-                                        "audio" "video"))
+                                        "audio" "video"
+                                        "lp")) ;; needed for bluetooth
                 (home-directory "/home/jfred"))
                %base-user-accounts))
 
@@ -57,6 +59,7 @@
                    gvfs              ;for user mounts
 		   sysfsutils
                    xscreensaver
+                   flatpak
                    %base-packages))
 
   ;; Add GNOME and/or Xfce---we can choose at the log-in
@@ -69,6 +72,9 @@
                    (service fprintd-service-type)
                    (service pcscd-service-type)
                    (service docker-service-type)
+                   (service bluetooth-service-type
+                            (bluetooth-configuration
+                             (auto-enable? #t)))
                    %desktop-services))
 
   ;; Allow resolution of '.local' host names with mDNS.
