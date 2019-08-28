@@ -13,7 +13,6 @@
    ;;Hacking
    "emacs"
    "emacs-debbugs"
-   "emacs-zones"
    "git"
    "git:send-email"
    "guile@2.2"
