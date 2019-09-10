@@ -15,9 +15,6 @@
 ;; custom.el is updated automatically but isn't tracked in git
 (load "~/.emacs.d/package.el")
 
-;; Install all my packages
-(package-install-selected-packages)
-
 ;; Set up the environment
 (load "~/.emacs.d/env.el")
 
