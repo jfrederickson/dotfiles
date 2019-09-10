@@ -61,7 +61,9 @@
 (use-package paredit
   :ensure t)
 (use-package elpy
-  :ensure t)
+  :ensure t
+  :init
+  (elpy-enable))
 (use-package helm
   :ensure t)
 (use-package better-defaults
@@ -82,3 +84,13 @@
   :ensure t)
 (use-package hyperbole
   :ensure t)
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
+(use-package eudc
+  :ensure t)
+(use-package apache-mode
+  :ensure t)
+;;(use-package poet-theme
+;;  :ensure t)
