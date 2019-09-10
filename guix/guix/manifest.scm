@@ -1,6 +1,6 @@
 (specifications->manifest
  '("glibc-utf8-locales"
-   ;;# Dotfiles management
+   ;;Dotfiles management
    "stow"
    "rofi"
    "gnupg"
@@ -10,23 +10,32 @@
    "emacs-use-package"
    "pcsc-lite"
    "opensc"
-   ;;# Hacking
+   ;;Hacking
    "emacs"
    "emacs-debbugs"
    "git"
    "git:send-email"
    "guile@2.2"
+   "guile-git"
+   "autoconf"
    "font-adobe-source-code-pro"
    "emacs-guix"
    "emacs-emojify"
    "glade"
-   ;;# Devops
+   "racket"
+   "python-virtualenv"
+   "emacs-jedi"
+   "python-jedi"
+   ;; Blogging
+   "haunt"
+   ;; Devops
    "docker"
    "docker-cli"
    "docker-compose"
    ;; System Administration
    "htop"
    "curl"
+   "wget"
    "the-silver-searcher"
    "openssh"
    "adb"
@@ -35,30 +44,52 @@
    "tinc"
    "bind:utils"
    "fprintd"
+   "encfs"
+   "qrencode"
+   "openjdk"
+   "java-swt"
+   "fontconfig"
+   "nss-certs"
+   ;; Messaging
+   "mu"
+   "quaternion"
+   "toot"
+   "dino"
    ;;# Desktop
    "gnome-tweaks"
    "gnome-calendar"
    "gnome-keyring"
    "gnome-bluetooth"
+   "gnome-shell-extensions"
    "claws-mail"
    "icecat"
-   ;;"icecat"
+   "gimp"
+   "inkscape"
    "luakit"
    "flatpak"
-   "evolution"
-   "evolution-data-server"
-   "gpodder"
-   "shotwell"
-   "jami-client-gnome"
+
+
+   "arc-theme"
+   "arc-icon-theme"
    "dbus"
+   ;; Fonts
    "font-google-noto"
-   "vlc"
-   "toot"
+   "font-terminus"
+   "font-liberation"
+   "font-lato"
+   "font-awesome"
+   "font-ibm-plex"
    ;; Media
+   "vlc"
+   "pavucontrol"
    "gst-plugins-bad"
    "gst-plugins-base"
    "gst-plugins-good"
    "gst-plugins-ugly"
+   "gpodder"
+   "shotwell"
+   ;; Fun
+   "emacs-ascii-art-to-unicode"
    ;; Gaming
    "tintin++"
    "powwow"))

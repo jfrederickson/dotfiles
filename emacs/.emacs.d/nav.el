@@ -46,6 +46,9 @@
 (global-set-key (kbd "C-c >") 'smerge-keep-other)
 (global-set-key (kbd "C-c n") 'smerge-next)
 
+;; Guix keybindings
+(global-set-key (kbd "C-c g g") 'guix)
+
 ;; Search for stuff
 (global-set-key (kbd "C-c s") 'ag)
 

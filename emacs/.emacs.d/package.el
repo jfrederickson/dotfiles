@@ -94,3 +94,5 @@
   :ensure t)
 ;;(use-package poet-theme
 ;;  :ensure t)
+(use-package nginx-mode
+  :ensure t)
