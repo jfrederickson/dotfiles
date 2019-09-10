@@ -31,6 +31,7 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x g b") 'helm-bookmarks)
 
 ;; Dash keybindings
 (global-set-key (kbd "C-x ?") 'helm-dash)
@@ -69,6 +70,14 @@
 (global-set-key (kbd "C-c p c") 'password-store-copy)
 (global-set-key (kbd "C-c p g") 'password-store-generate)
 (global-set-key (kbd "C-c p e") 'password-store-edit)
+
+;; Hideshow keybindings
+(global-set-key (read-kbd-macro "<C-tab>") 'hs-toggle-hiding)
+
+;; Docker keybindings
+(global-set-key (kbd "C-c d") 'docker)
+(global-set-key (kbd "C-c k") 'kubernetes-overview)
+
 
 ;;; scroll one line at a time (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 1))) ;; two lines at a time
