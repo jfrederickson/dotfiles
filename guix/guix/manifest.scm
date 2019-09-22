@@ -93,4 +93,5 @@
    "emacs-ascii-art-to-unicode"
    ;; Gaming
    "tintin++"
-   "powwow"))
+   "powwow"
+   "harmonist-tk"))
