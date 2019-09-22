@@ -26,6 +26,7 @@
    "python-virtualenv"
    "emacs-jedi"
    "python-jedi"
+   "python-django"
    ;; Blogging
    "haunt"
    ;; Devops
