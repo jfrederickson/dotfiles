@@ -23,16 +23,20 @@
    "emacs-emojify"
    "glade"
    "racket"
+   "python"
    "python-virtualenv"
    "emacs-jedi"
    "python-jedi"
    "python-django"
+   "python-netaddr"
    ;; Blogging
    "haunt"
    ;; Devops
    "docker"
    "docker-cli"
    "docker-compose"
+   "ansible"
+   "debops"
    ;; System Administration
    "htop"
    "curl"
@@ -51,6 +55,7 @@
    "java-swt"
    "fontconfig"
    "nss-certs"
+   "git-crypt"
    ;; Messaging
    "mu"
    "quaternion"
