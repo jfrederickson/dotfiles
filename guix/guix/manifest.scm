@@ -13,7 +13,6 @@
    ;;Hacking
    "emacs"
    "emacs-debbugs"
-   "emacs-zones"
    "git"
    "git:send-email"
    "guile@2.2"
@@ -32,6 +31,7 @@
    "python-pygobject"
    "python-pygpgme"
    "d-feet"
+   "python-django"
    ;; ARM Hacking
    "dfu-programmer"
    "dfu-util"
@@ -106,4 +106,5 @@
    "emacs-ascii-art-to-unicode"
    ;; Gaming
    "tintin++"
-   "powwow"))
+   "powwow"
+   "harmonist-tk"))
