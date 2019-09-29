@@ -27,8 +27,19 @@
    "python-virtualenv"
    "emacs-jedi"
    "python-jedi"
+   "gobject-introspection"
+   "python-pygobject"
+   "python-pygpgme"
+   "d-feet"
    "python-django"
    "python-netaddr"
+   ;; ARM Hacking
+   "dfu-programmer"
+   "dfu-util"
+   "avr-binutils"
+   "avr-toolchain"
+   "arm-none-eabi-toolchain"
+   "newlib"
    ;; Blogging
    "haunt"
    ;; Devops
@@ -66,6 +77,7 @@
    "gnome-calendar"
    "gnome-keyring"
    "gnome-bluetooth"
+   "bluez"
    "gnome-shell-extensions"
    "claws-mail"
    "icecat"

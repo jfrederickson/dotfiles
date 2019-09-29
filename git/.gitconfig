@@ -4,8 +4,6 @@
         signingkey = 7A53BC6EEDD70AA4E7D8C54243B0279E2936E864
 [commit]
         gpgsign = true
-#[status]
-        #showUntrackedFiles = no
 [sendemail]
 	smtpencryption = tls
 	smtpserver = smtp.fastmail.com

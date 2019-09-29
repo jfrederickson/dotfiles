@@ -13,6 +13,11 @@
 (use-service-modules desktop)
 (use-package-modules certs gnome)
 
+(define %u2f-udev-rule
+  (file->udev-rule
+    "70-u2f.rules"
+    (local-file "udev/70-u2f.rules")))
+
 (operating-system
   (host-name "lambdacrypt")
   (timezone "America/New_York")
@@ -50,9 +55,13 @@
                 (group "users")
                 (supplementary-groups '("wheel" "netdev"
                                         "audio" "video"
-                                        "lp")) ;; needed for bluetooth
+                                        "lp" "plugdev"))
                 (home-directory "/home/jfred"))
                %base-user-accounts))
+
+  (groups (cons (user-group
+                 (name "plugdev"))
+                %base-groups))
 
   ;; This is where we specify system-wide packages.
   (packages (cons* nss-certs         ;for HTTPS access
@@ -75,7 +84,11 @@
                    (service bluetooth-service-type
                             (bluetooth-configuration
                              (auto-enable? #t)))
-                   %desktop-services))
+                   (modify-services %desktop-services
+                                    (udev-service-type config =>
+                                                       (udev-configuration (inherit config)
+                                                                           (rules (append (udev-configuration-rules config)
+                                                                                          (list %u2f-udev-rule))))))))
 
   ;; Allow resolution of '.local' host names with mDNS.
   (name-service-switch %mdns-host-lookup-nss))
