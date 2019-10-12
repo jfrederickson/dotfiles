@@ -23,15 +23,34 @@
    "emacs-emojify"
    "glade"
    "racket"
+   "python"
    "python-virtualenv"
    "emacs-jedi"
    "python-jedi"
+   "gobject-introspection"
+   "python-pygobject"
+   "python-pygpgme"
+   "d-feet"
+   "python-django"
+   "python-netaddr"
+   "elixir"
+   "emacs-elixir-mode"
+   "erlang"
+   "emacs-erlang"
+   ;; ARM Hacking
+   "dfu-programmer"
+   "dfu-util"
+   "avr-binutils"
+   "avr-toolchain"
+   "arm-none-eabi-toolchain"
    ;; Blogging
    "haunt"
    ;; Devops
    "docker"
    "docker-cli"
    "docker-compose"
+   ;;"ansible" ; build currently broken in guix
+   ;;"debops"
    ;; System Administration
    "htop"
    "curl"
@@ -50,6 +69,7 @@
    "java-swt"
    "fontconfig"
    "nss-certs"
+   "git-crypt"
    ;; Messaging
    "mu"
    "quaternion"
@@ -60,6 +80,7 @@
    "gnome-calendar"
    "gnome-keyring"
    "gnome-bluetooth"
+   "bluez"
    "gnome-shell-extensions"
    "claws-mail"
    "icecat"
@@ -88,8 +109,10 @@
    "gst-plugins-ugly"
    "gpodder"
    "shotwell"
+   "youtube-dl"
    ;; Fun
    "emacs-ascii-art-to-unicode"
    ;; Gaming
    "tintin++"
-   "powwow"))
+   "powwow"
+   "harmonist-tk"))

@@ -10,7 +10,8 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 ;;(load-theme 'material)
 ;;(load-theme 'gruvbox)
-(load-theme 'sourcerer)
+;;(load-theme 'sourcerer)
+(load-theme 'one-light)
 ;;(load-theme 'flatui)
 ;;(load-theme 'tron)
 
@@ -22,3 +23,4 @@
 (setq inhibit-startup-message t)
 
 (setq-default cursor-type 'bar)
+(set-frame-font "-ADBO-Source Code Pro-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1")
