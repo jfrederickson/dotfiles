@@ -96,3 +96,5 @@
 ;;  :ensure t)
 (use-package nginx-mode
   :ensure t)
+(use-package one-themes
+  :ensure t)
