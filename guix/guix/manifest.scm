@@ -33,21 +33,24 @@
    "d-feet"
    "python-django"
    "python-netaddr"
+   "elixir"
+   "emacs-elixir-mode"
+   "erlang"
+   "emacs-erlang"
    ;; ARM Hacking
    "dfu-programmer"
    "dfu-util"
    "avr-binutils"
    "avr-toolchain"
    "arm-none-eabi-toolchain"
-   "newlib"
    ;; Blogging
    "haunt"
    ;; Devops
    "docker"
    "docker-cli"
    "docker-compose"
-   "ansible"
-   "debops"
+   ;;"ansible" ; build currently broken in guix
+   ;;"debops"
    ;; System Administration
    "htop"
    "curl"
@@ -106,6 +109,7 @@
    "gst-plugins-ugly"
    "gpodder"
    "shotwell"
+   "youtube-dl"
    ;; Fun
    "emacs-ascii-art-to-unicode"
    ;; Gaming
