@@ -36,6 +36,11 @@
    "python-pygpgme"
    "d-feet"
    "python-django"
+   "python-netaddr"
+   "elixir"
+   "emacs-elixir-mode"
+   "erlang"
+   "emacs-erlang"
    ;; ARM Hacking
    "dfu-programmer"
    "dfu-util"
@@ -48,6 +53,8 @@
    "docker"
    "docker-cli"
    "docker-compose"
+   ;;"ansible" ; build currently broken in guix
+   ;;"debops"
    ;; System Administration
    "htop"
    "curl"
@@ -66,6 +73,7 @@
    "java-swt"
    "fontconfig"
    "nss-certs"
+   "git-crypt"
    ;; Messaging
    "mu"
    "quaternion"
@@ -105,6 +113,7 @@
    "gst-plugins-ugly"
    "gpodder"
    "shotwell"
+   "youtube-dl"
    ;; Fun
    "emacs-ascii-art-to-unicode"
    ;; Gaming
