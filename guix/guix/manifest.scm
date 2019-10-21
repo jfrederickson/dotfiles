@@ -1,5 +1,8 @@
 (specifications->manifest
  '("glibc-utf8-locales"
+   "gs-fonts"
+   "font-dejavu"
+   "font-gnu-freefont-ttf"
    ;;Dotfiles management
    "stow"
    "rofi"
@@ -24,6 +27,7 @@
    "glade"
    "racket"
    "python"
+   "python-ipython"
    "python-virtualenv"
    "emacs-jedi"
    "python-jedi"
@@ -38,7 +42,6 @@
    "avr-binutils"
    "avr-toolchain"
    "arm-none-eabi-toolchain"
-   "newlib"
    ;; Blogging
    "haunt"
    ;; Devops
