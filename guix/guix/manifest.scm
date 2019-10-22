@@ -37,6 +37,9 @@
    "emacs-elixir-mode"
    "erlang"
    "emacs-erlang"
+   "ruby"
+   "ruby-rails"
+   "bundler"
    ;; ARM Hacking
    "dfu-programmer"
    "dfu-util"
@@ -49,8 +52,8 @@
    "docker"
    "docker-cli"
    "docker-compose"
-   ;;"ansible" ; build currently broken in guix
-   ;;"debops"
+   "ansible"
+   "debops"
    ;; System Administration
    "htop"
    "curl"
@@ -69,7 +72,7 @@
    "java-swt"
    "fontconfig"
    "nss-certs"
-   "git-crypt"
+   ;;"git-crypt" ; broken build
    ;; Messaging
    "mu"
    "quaternion"
