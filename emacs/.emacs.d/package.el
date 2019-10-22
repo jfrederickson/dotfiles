@@ -96,6 +96,13 @@
 ;;  :ensure t)
 (use-package nginx-mode
   :ensure t)
+(use-package s
+  :ensure t)
+(use-package mastodon
+  :ensure t)
+(use-package highlight-indent-guides
+  :ensure t
+  :hook (yaml-mode . highlight-indent-guides-mode))
 (use-package one-themes
   :ensure t)
 (use-package elixir-mode
