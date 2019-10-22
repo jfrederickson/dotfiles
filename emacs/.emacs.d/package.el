@@ -98,3 +98,5 @@
   :ensure t)
 (use-package one-themes
   :ensure t)
+(use-package elixir-mode
+  :ensure t)
