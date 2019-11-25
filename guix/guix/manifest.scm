@@ -44,6 +44,9 @@
    "ruby"
    "ruby-rails"
    "bundler"
+   "go"
+   "binutils"
+   "linux-libre-headers"
    ;; ARM Hacking
    "dfu-programmer"
    "dfu-util"
@@ -79,6 +82,7 @@
    ;;"git-crypt" ; broken build
    ;; Messaging
    "mu"
+   "offlineimap"
    "quaternion"
    "toot"
    "dino"
