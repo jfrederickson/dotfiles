@@ -1,0 +1,2 @@
+# PN533 NFC reader
+SUBSYSTEM=="usb", ACTION=="add", ATTRS{idVendor}=="04cc", ATTRS{idProduct}=="2533", GROUP="plugdev"

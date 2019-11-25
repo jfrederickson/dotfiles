@@ -18,6 +18,11 @@
     "70-u2f.rules"
     (local-file "udev/70-u2f.rules")))
 
+(define %nfc-udev-rule
+  (file->udev-rule
+    "99-nfc.rules"
+    (local-file "udev/99-nfc.rules")))
+
 (operating-system
   (host-name "lambdacrypt")
   (timezone "America/New_York")
@@ -88,7 +93,7 @@
                                     (udev-service-type config =>
                                                        (udev-configuration (inherit config)
                                                                            (rules (append (udev-configuration-rules config)
-                                                                                          (list %u2f-udev-rule))))))))
+                                                                                          (list %u2f-udev-rule %nfc-udev-rule))))))))
 
   ;; Allow resolution of '.local' host names with mDNS.
   (name-service-switch %mdns-host-lookup-nss))
