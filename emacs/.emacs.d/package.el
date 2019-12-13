@@ -107,3 +107,5 @@
   :ensure t)
 (use-package elixir-mode
   :ensure t)
+(use-package terraform-mode
+  :ensure t)
