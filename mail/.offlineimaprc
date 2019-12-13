@@ -1,0 +1,27 @@
+[general]
+accounts = Fastmail
+maxsyncaccounts = 2
+
+[Account Fastmail]
+localrepository = LocalFastmail
+remoterepository = RepositoryFastmail
+autorefresh = 5
+quick = 10
+postsynchook = mu index --maildir ~/Maildir
+
+[Repository LocalFastmail]
+type = Maildir
+localfolders = ~/Maildir/Fastmail
+
+[Repository RepositoryFastmail]
+type = IMAP
+maxconnections = 2
+remoteuser = jonathan@terracrypt.net
+remotehost = imap.fastmail.com
+remoteport = 993
+tls_level = tls_secure
+ssl_version = tls1_2
+
+## Try one of the following for Ubuntu or Arch:
+sslcacertfile = ~/.guix-profile/etc/ssl/certs/ca-certificates.crt
+
