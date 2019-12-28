@@ -1,3 +1,9 @@
+(dolist (package '(use-package))
+  (unless (package-installed-p package)
+    (progn
+      (package-refresh-contents)
+      (package-install package))))
+
 (use-package quelpa
   :ensure t)
 (use-package quelpa-use-package
