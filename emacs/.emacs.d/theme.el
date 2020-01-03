@@ -11,7 +11,8 @@
 ;;(load-theme 'material)
 ;;(load-theme 'gruvbox)
 ;;(load-theme 'sourcerer)
-(load-theme 'one-light)
+;;(load-theme 'one-light)
+(load-theme 'spacemacs-dark)
 ;;(load-theme 'flatui)
 ;;(load-theme 'tron)
 
@@ -27,6 +28,6 @@
 
 (set-face-attribute 'default nil
                     :family "Source Code Pro"
-                    :height 140
+                    :height 110
                     :weight 'normal
                     :width 'normal)
