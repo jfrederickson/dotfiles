@@ -3,9 +3,12 @@
    "gs-fonts"
    "font-dejavu"
    "font-gnu-freefont-ttf"
+   "font-abattis-cantarell"
    ;;Dotfiles management
    "stow"
    "rofi"
+   "rofi-pass"
+   "xset" ;; dep for rofi-pass I think, should contribute patch
    "gnupg"
    "pinentry-gnome3"
    "pinentry-emacs"
@@ -27,7 +30,7 @@
    "glade"
    "racket"
    "python"
-   "python-ipython"
+   ;;"python-ipython"
    "python-virtualenv"
    "emacs-jedi"
    "python-jedi"
@@ -62,6 +65,8 @@
    "ansible"
    "debops"
    ;; System Administration
+   ;;"terminator"
+   "lxc"
    "htop"
    "curl"
    "wget"
@@ -86,6 +91,7 @@
    "quaternion"
    "toot"
    "dino"
+   "gnunet"
    ;;# Desktop
    "gnome-tweaks"
    "gnome-calendar"
@@ -93,7 +99,9 @@
    "gnome-bluetooth"
    "bluez"
    "gnome-shell-extensions"
-   "claws-mail"
+   "gnome-shell-extension-dash-to-panel"
+   "matcha-theme"
+   ;;"claws-mail"
    "icecat"
    "gimp"
    "inkscape"
@@ -101,7 +109,7 @@
    "flatpak"
 
 
-   "arc-theme"
+   ;;"arc-theme"
    "arc-icon-theme"
    "dbus"
    ;; Fonts
@@ -121,6 +129,7 @@
    "gpodder"
    "shotwell"
    "youtube-dl"
+   "calibre"
    ;; Fun
    "emacs-ascii-art-to-unicode"
    ;; Gaming
