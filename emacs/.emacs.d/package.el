@@ -109,3 +109,5 @@
   :ensure t)
 (use-package nov
   :ensure t)
+(use-package rust-mode
+  :ensure t)
