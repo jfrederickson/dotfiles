@@ -8,6 +8,7 @@
              (gnu packages package-management)
              (gnu services xorg)
              (gnu services authentication)
+             (gnu packages security-token)
              (gnu services security-token)
              (gnu services docker))
 (use-service-modules desktop)
@@ -90,10 +91,17 @@
                             (bluetooth-configuration
                              (auto-enable? #t)))
                    (modify-services %desktop-services
-                                    (udev-service-type config =>
-                                                       (udev-configuration (inherit config)
-                                                                           (rules (append (udev-configuration-rules config)
-                                                                                          (list %u2f-udev-rule %nfc-udev-rule))))))))
+                                    (udev-service-type
+                                     config =>
+                                     (udev-configuration (inherit config)
+                                                         (rules (cons libu2f-host
+                                                                      (udev-configuration-rules
+                                                                       config))))))))
+                   ;;(modify-services %desktop-services
+                   ;;                 (udev-service-type config =>
+                   ;;                                    (udev-configuration (inherit config)
+                   ;;                                                        (rules (append (udev-configuration-rules config)
+                   ;;                                                                       (list %u2f-udev-rule %nfc-udev-rule))))))))
 
   ;; Allow resolution of '.local' host names with mDNS.
   (name-service-switch %mdns-host-lookup-nss))
