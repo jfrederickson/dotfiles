@@ -65,6 +65,7 @@
    "ansible"
    "debops"
    ;; System Administration
+   "pwgen"
    ;;"terminator"
    "lxc"
    "htop"
@@ -135,4 +136,5 @@
    ;; Gaming
    "tintin++"
    "powwow"
-   "harmonist-tk"))
+   "harmonist-tk"
+   "minetest"))
