@@ -1,3 +1,9 @@
+(dolist (package '(use-package))
+  (unless (package-installed-p package)
+    (progn
+      (package-refresh-contents)
+      (package-install package))))
+
 (use-package quelpa
   :ensure t)
 (use-package quelpa-use-package
@@ -106,6 +112,8 @@
 (use-package one-themes
   :ensure t)
 (use-package elixir-mode
+  :ensure t)
+(use-package terraform-mode
   :ensure t)
 (use-package nov
   :ensure t)
