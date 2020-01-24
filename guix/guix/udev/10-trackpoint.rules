@@ -1,0 +1,1 @@
+ACTION=="add",DEVPATH=="/devices/platform/i8042/serio1/serio2",ATTR{sensitivity}="255",ATTR{speed}="255",ATTR{resolution}="255",ATTR{rate}="200"

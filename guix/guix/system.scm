@@ -24,6 +24,11 @@
     "99-nfc.rules"
     (local-file "udev/99-nfc.rules")))
 
+(define %trackpoint-udev-rule
+  (file->udev-rule
+   "10-trackpoint.rules"
+   (local-file "udev/10-trackpoint.rules")))
+
 (operating-system
   (host-name "lambdacrypt")
   (timezone "America/New_York")
@@ -94,9 +99,9 @@
                                     (udev-service-type
                                      config =>
                                      (udev-configuration (inherit config)
-                                                         (rules (cons libu2f-host
-                                                                      (udev-configuration-rules
-                                                                       config))))))))
+                                                         (rules (cons* libu2f-host
+                                                                       %trackpoint-udev-rule
+                                                                      (udev-configuration-rules config))))))))
                    ;;(modify-services %desktop-services
                    ;;                 (udev-service-type config =>
                    ;;                                    (udev-configuration (inherit config)
