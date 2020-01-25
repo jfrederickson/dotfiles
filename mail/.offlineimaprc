@@ -24,6 +24,6 @@ remoteport = 993
 tls_level = tls_secure
 ssl_version = tls1_2
 
-## Try one of the following for Ubuntu or Arch:
+## Guix CA cert file - I've installed mu4e through Guix
 sslcacertfile = ~/.guix-profile/etc/ssl/certs/ca-certificates.crt
 
