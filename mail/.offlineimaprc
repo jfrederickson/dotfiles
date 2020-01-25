@@ -1,6 +1,7 @@
 [general]
 accounts = Fastmail
 maxsyncaccounts = 2
+pythonfile = ~/bin/mailpass.py
 
 [Account Fastmail]
 localrepository = LocalFastmail
@@ -17,6 +18,7 @@ localfolders = ~/Maildir/Fastmail
 type = IMAP
 maxconnections = 2
 remoteuser = jonathan@terracrypt.net
+remotepasseval = mailpasswd("fastmail")
 remotehost = imap.fastmail.com
 remoteport = 993
 tls_level = tls_secure
