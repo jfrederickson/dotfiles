@@ -1,3 +1,13 @@
+(use-modules
+;; (gnu packages)
+ (guix packages)
+;; (guix profiles)
+ (guix git-download)
+ (guix build-system python)
+ (gnu packages python-xyz)
+ (gnu packages python-web)
+ ((guix licenses) #:prefix license:))
+
 (define-public jfred:python-linode-api4
   (package
     (name "python-linode-api4")

@@ -1,14 +1,7 @@
 (use-modules
- (gnu packages)
- (guix packages)
- (guix profiles)
- (guix git-download)
- (guix build-system python)
- (gnu packages python-xyz)
- (gnu packages python-web)
- ((guix licenses) #:prefix license:))
+ (guix profiles))
 
-(include "jfred-packages.scm")
+(load "jfred-packages.scm")
 
 (packages->manifest
  (append `(,jfred:python-linode-api4)
