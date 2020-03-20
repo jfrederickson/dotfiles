@@ -102,6 +102,7 @@
                 "dino"
                 "gnunet"
                 "gajim"
+                "mumble"
                 ;;# Desktop
                 "gnome-tweaks"
                 "gnome-calendar"
@@ -109,6 +110,7 @@
                 "gnome-bluetooth"
                 "bluez"
                 "gnome-shell-extensions"
+                "gnome-shell-extension-appindicator"
                 "gnome-shell-extension-dash-to-panel"
                 "matcha-theme"
                 ;;"claws-mail"
