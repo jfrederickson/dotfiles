@@ -7,12 +7,20 @@
              (gnu packages xdisorg)
              (gnu packages package-management)
              (gnu services xorg)
+             (gnu packages xfce)
              (gnu services authentication)
+             (gnu services dbus)
+             (gnu services desktop)
              (gnu packages security-token)
              (gnu services security-token)
+             (gnu packages certs)
+             (gnu packages gnome)
              (gnu services docker))
-(use-service-modules desktop)
-(use-package-modules certs gnome)
+             ;;(gnu packages wireguard))
+;;(use-service-modules desktop dbus)
+;;(use-package-modules certs gnome)
+
+(load "jfred-packages.scm")
 
 (define %u2f-udev-rule
   (file->udev-rule
@@ -78,8 +86,11 @@
   (packages (cons* nss-certs         ;for HTTPS access
                    gvfs              ;for user mounts
 		   sysfsutils
-                   xscreensaver
+                   xfce4-screensaver
+                   jfred:ladspa-bs2b
+                   ;;xscreensaver
                    flatpak
+                   ;;wireguard-tools
                    %base-packages))
 
   ;; Add GNOME and/or Xfce---we can choose at the log-in
@@ -92,17 +103,25 @@
                    (service fprintd-service-type)
                    (service pcscd-service-type)
                    (service docker-service-type)
+                   ;;(service dbus-root-service-type
+                   ;;         (dbus-configuration (services (list xfce4-screensaver))))
                    (service bluetooth-service-type
                             (bluetooth-configuration
                              (auto-enable? #t)))
-                   (modify-services %desktop-services
-                                    (udev-service-type
-                                     config =>
-                                     (udev-configuration (inherit config)
-                                                         (rules (cons* libu2f-host
-                                                                       %trackpoint-udev-rule
-                                                                      (udev-configuration-rules config))))))))
                    ;;(modify-services %desktop-services
+                   ;;  (dbus-root-service-type
+                   ;;   config =>
+                   ;;   (dbus-configuration (inherit config)
+                   ;;                       (services (cons* xfce4-screensaver
+                   ;;                                        (dbus-configuration-services config))))))
+                   (modify-services %desktop-services
+                     (udev-service-type
+                      config =>
+                      (udev-configuration (inherit config)
+                                          (rules (cons* libu2f-host
+                                                        %trackpoint-udev-rule
+                                                        (udev-configuration-rules config))))))))
+  ;;(modify-services %desktop-services
                    ;;                 (udev-service-type config =>
                    ;;                                    (udev-configuration (inherit config)
                    ;;                                                        (rules (append (udev-configuration-rules config)

@@ -4,7 +4,8 @@
 (load "jfred-packages.scm")
 
 (packages->manifest
- (append `(,jfred:python-linode-api4)
+ (append `(,jfred:python-linode-api4
+           ,jfred:ladspa-bs2b)
          (map (compose list specification->package+output)
               '("glibc-utf8-locales"
                 "gs-fonts"
@@ -58,12 +59,6 @@
                 "go"
                 "binutils"
                 "linux-libre-headers"
-                ;; ARM Hacking
-                "dfu-programmer"
-                "dfu-util"
-                "avr-binutils"
-                "avr-toolchain"
-                "arm-none-eabi-toolchain"
                 ;; Blogging
                 "haunt"
                 ;; Devops
@@ -101,6 +96,7 @@
                 "toot"
                 "dino"
                 "gnunet"
+                "gnunet-gtk"
                 "gajim"
                 "mumble"
                 ;;# Desktop
@@ -113,12 +109,16 @@
                 "gnome-shell-extension-appindicator"
                 "gnome-shell-extension-dash-to-panel"
                 "matcha-theme"
+                "sound-theme-freedesktop"
                 ;;"claws-mail"
+                "geary"
                 "icecat"
+                "ungoogled-chromium"
                 "gimp"
                 "inkscape"
                 "luakit"
                 "flatpak"
+                "deluge"
 
 
                 ;;"arc-theme"
