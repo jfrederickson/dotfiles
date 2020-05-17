@@ -119,8 +119,8 @@
   :ensure t)
 (use-package rust-mode
   :ensure t)
-(use-package spacemacs-theme
-  :ensure t)
+;;(use-package spacemacs-theme
+;;  :ensure t)
 (use-package ansible
   :ensure t)
 (use-package ini-mode
