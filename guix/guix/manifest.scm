@@ -112,6 +112,7 @@
                 "sound-theme-freedesktop"
                 ;;"claws-mail"
                 "geary"
+                "libreoffice"
                 "icecat"
                 "ungoogled-chromium"
                 "gimp"
@@ -144,6 +145,7 @@
                 "calibre"
                 ;; Fun
                 "emacs-ascii-art-to-unicode"
+                "filters"
                 ;; Gaming
                 "tintin++"
                 "powwow"
