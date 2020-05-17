@@ -69,8 +69,10 @@
               ("libbs2b" ,libbs2b)))
     (home-page "https://sourceforge.net/projects/bs2b/")
     (synopsis "Bauer stereophonic-to-binaural DSP - LADSPA plugin")
-    (description "The Bauer stereophonic-to-binaural DSP (bs2b) library and plugins is
-designed to improve headphone listening of stereo audio records.  Recommended
-for headphone prolonged listening to disable superstereo fatigue without
-essential distortions.")
+    (description "The Bauer stereophonic-to-binaural DSP (bs2b)
+library and plugins is designed to improve headphone listening of
+stereo audio records.  Recommended for headphone prolonged listening
+to disable superstereo fatigue without essential distortions. This
+package contains a LADSPA plugin for use with applications that
+support them (e.g. PulseAudio).")
     (license license:gpl2)))
