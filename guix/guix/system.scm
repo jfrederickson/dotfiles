@@ -11,6 +11,7 @@
              (gnu services authentication)
              (gnu services dbus)
              (gnu services desktop)
+             (gnu services sound)
              (gnu packages security-token)
              (gnu services security-token)
              (gnu packages certs)
@@ -108,6 +109,8 @@
                    (service bluetooth-service-type
                             (bluetooth-configuration
                              (auto-enable? #t)))
+                   (service ladspa-service-type
+                            (ladspa-configuration (plugins (list jfred:ladspa-bs2b))))
                    ;;(modify-services %desktop-services
                    ;;  (dbus-root-service-type
                    ;;   config =>
