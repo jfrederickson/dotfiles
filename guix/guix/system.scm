@@ -70,6 +70,8 @@
                                (type "ext4")))
                         %base-file-systems))
 
+  (swap-devices '("/mnt/swapfile"))
+
   (users (cons (user-account
                 (name "jfred")
                 (group "users")
