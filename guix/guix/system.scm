@@ -16,6 +16,7 @@
              (gnu services security-token)
              (gnu packages certs)
              (gnu packages gnome)
+             (gnu packages wm)
              (gnu services docker))
              ;;(gnu packages wireguard))
 ;;(use-service-modules desktop dbus)
@@ -93,6 +94,9 @@
                    jfred:ladspa-bs2b
                    ;;xscreensaver
                    flatpak
+                   i3-gaps
+                   i3status
+                   network-manager-applet
                    ;;wireguard-tools
                    %base-packages))
 
@@ -106,8 +110,10 @@
                    (service fprintd-service-type)
                    (service pcscd-service-type)
                    (service docker-service-type)
+                   (screen-locker-service xfce4-screensaver "xfce4-screensaver")
                    ;;(service dbus-root-service-type
                    ;;         (dbus-configuration (services (list xfce4-screensaver))))
+                   ;;(service dbus-service)
                    (service bluetooth-service-type
                             (bluetooth-configuration
                              (auto-enable? #t)))
