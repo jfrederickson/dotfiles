@@ -29,7 +29,7 @@
                 "emacs-debbugs"
                 "git"
                 "git:send-email"
-                "guile@2.2"
+                "guile"
                 "guile-git"
                 "autoconf"
                 "font-adobe-source-code-pro"
@@ -69,6 +69,7 @@
                 "debops"
                 ;; System Administration
                 "pwgen"
+                "mtr"
                 ;;"terminator"
                 "lxc"
                 "htop"
@@ -150,4 +151,5 @@
                 "tintin++"
                 "powwow"
                 "harmonist-tk"
-                "minetest"))))
+                "minetest"
+                "supertuxkart"))))
