@@ -125,3 +125,11 @@
   :ensure t)
 (use-package ini-mode
   :ensure t)
+(use-package elpher
+  :ensure t)
+(use-package base16-theme
+  :ensure t)
+(use-package nix-mode
+  :ensure t)
+(use-package elfeed-protocol
+  :ensure t)
