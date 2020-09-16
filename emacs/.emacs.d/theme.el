@@ -12,7 +12,12 @@
 ;;(load-theme 'gruvbox)
 ;;(load-theme 'sourcerer)
 ;;(load-theme 'one-light)
-(load-theme 'spacemacs-dark)
+;;(load-theme 'spacemacs-dark)
+;;(load-theme 'base16-spacemacs)
+;;(load-theme 'base16-tomorrow-night-eighties)
+;;y(load-theme 'base16-google-dark)
+;;(load-theme 'base16-helios)
+(load-theme 'base16-chalk)
 ;;(load-theme 'flatui)
 ;;(load-theme 'tron)
 
