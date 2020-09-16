@@ -11,11 +11,13 @@
              (gnu services authentication)
              (gnu services dbus)
              (gnu services desktop)
+             (gnu services linux)
              (gnu services sound)
              (gnu packages security-token)
              (gnu services security-token)
              (gnu packages certs)
              (gnu packages gnome)
+             (gnu packages freedesktop)
              (gnu packages wm)
              (gnu services docker))
              ;;(gnu packages wireguard))
@@ -23,6 +25,12 @@
 ;;(use-package-modules certs gnome)
 
 (load "jfred-packages.scm")
+
+
+(define %powertop-service
+  (simple-service 'powertop activation-service-type
+		  #~(zero? (system* #$(file-append powertop "/sbin/powertop")
+				    "--auto-tune"))))
 
 (define %u2f-udev-rule
   (file->udev-rule
@@ -78,7 +86,8 @@
                 (group "users")
                 (supplementary-groups '("wheel" "netdev"
                                         "audio" "video"
-                                        "lp" "plugdev"))
+                                        "lp" "plugdev"
+                                        "dialout"))
                 (home-directory "/home/jfred"))
                %base-user-accounts))
 
@@ -94,8 +103,10 @@
                    jfred:ladspa-bs2b
                    ;;xscreensaver
                    flatpak
+                   xdg-desktop-portal-gtk
                    i3-gaps
                    i3status
+                   polybar
                    network-manager-applet
                    ;;wireguard-tools
                    %base-packages))
@@ -110,7 +121,9 @@
                    (service fprintd-service-type)
                    (service pcscd-service-type)
                    (service docker-service-type)
+                   (service earlyoom-service-type)
                    (screen-locker-service xfce4-screensaver "xfce4-screensaver")
+                   (screen-locker-service xscreensaver)
                    ;;(service dbus-root-service-type
                    ;;         (dbus-configuration (services (list xfce4-screensaver))))
                    ;;(service dbus-service)
@@ -125,6 +138,7 @@
                    ;;   (dbus-configuration (inherit config)
                    ;;                       (services (cons* xfce4-screensaver
                    ;;                                        (dbus-configuration-services config))))))
+                   %powertop-service
                    (modify-services %desktop-services
                      (udev-service-type
                       config =>

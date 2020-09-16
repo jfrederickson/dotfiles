@@ -49,7 +49,7 @@
                 "d-feet"
                 "python-django"
                 "python-netaddr"
-                "elixir"
+                ;; "elixir" ; failed build 2020-08-22
                 "emacs-elixir-mode"
                 "erlang"
                 "emacs-erlang"
@@ -59,6 +59,7 @@
                 "go"
                 "binutils"
                 "linux-libre-headers"
+                "gcc-toolchain"
                 ;; Blogging
                 "haunt"
                 ;; Devops
@@ -70,11 +71,14 @@
                 ;; System Administration
                 "pwgen"
                 "mtr"
+                "postgresql"
                 ;;"terminator"
+                "emacs-vterm"
                 "lxc"
                 "htop"
                 "curl"
                 "wget"
+                "netcat-openbsd"
                 "the-silver-searcher"
                 "openssh"
                 "adb"
@@ -100,6 +104,7 @@
                 "gnunet-gtk"
                 "gajim"
                 "mumble"
+                "polari"
                 ;;# Desktop
                 "gnome-tweaks"
                 "gnome-calendar"
@@ -115,17 +120,20 @@
                 "geary"
                 "libreoffice"
                 "icecat"
-                "ungoogled-chromium"
+                "icedove"
+                ;;"ungoogled-chromium"
                 "gimp"
                 "inkscape"
                 "luakit"
                 "flatpak"
+                "xdg-dbus-proxy"
                 "deluge"
 
 
                 ;;"arc-theme"
                 "arc-icon-theme"
                 "dbus"
+                "chirp"
                 ;; Fonts
                 "font-google-noto"
                 "font-terminus"
@@ -152,4 +160,6 @@
                 "powwow"
                 "harmonist-tk"
                 "minetest"
-                "supertuxkart"))))
+                "supertuxkart"
+                "crawl"
+                "crawl-tiles"))))
