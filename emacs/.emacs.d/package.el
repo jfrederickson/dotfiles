@@ -22,6 +22,9 @@
 (use-package sunrise-commander
   :quelpa (sunrise-commander :fetcher github :repo "escherdragon/sunrise-commander"))
 
+(use-package spotify
+  :quelpa (spotify :fetcher github :repo "danielfm/spotify.el"))
+
 (use-package git-link
   :ensure t)
 (use-package json-mode
@@ -51,6 +54,9 @@
 (use-package jabber
   :ensure t)
 (use-package magit
+  :ensure t)
+(use-package forge
+  :after magit
   :ensure t)
 (use-package rainbow-delimiters
   :ensure t)
@@ -124,4 +130,6 @@
 (use-package ansible
   :ensure t)
 (use-package ini-mode
+  :ensure t)
+(use-package poetry
   :ensure t)
