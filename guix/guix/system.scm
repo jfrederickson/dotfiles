@@ -7,12 +7,30 @@
              (gnu packages xdisorg)
              (gnu packages package-management)
              (gnu services xorg)
+             (gnu packages xfce)
              (gnu services authentication)
+             (gnu services dbus)
+             (gnu services desktop)
+             (gnu services linux)
+             (gnu services sound)
              (gnu packages security-token)
              (gnu services security-token)
+             (gnu packages certs)
+             (gnu packages gnome)
+             (gnu packages freedesktop)
+             (gnu packages wm)
              (gnu services docker))
-(use-service-modules desktop)
-(use-package-modules certs gnome)
+             ;;(gnu packages wireguard))
+;;(use-service-modules desktop dbus)
+;;(use-package-modules certs gnome)
+
+(load "jfred-packages.scm")
+
+
+(define %powertop-service
+  (simple-service 'powertop activation-service-type
+		  #~(zero? (system* #$(file-append powertop "/sbin/powertop")
+				    "--auto-tune"))))
 
 (define %u2f-udev-rule
   (file->udev-rule
@@ -61,12 +79,15 @@
                                (type "ext4")))
                         %base-file-systems))
 
+  (swap-devices '("/mnt/swapfile"))
+
   (users (cons (user-account
                 (name "jfred")
                 (group "users")
                 (supplementary-groups '("wheel" "netdev"
                                         "audio" "video"
-                                        "lp" "plugdev"))
+                                        "lp" "plugdev"
+                                        "dialout"))
                 (home-directory "/home/jfred"))
                %base-user-accounts))
 
@@ -78,8 +99,16 @@
   (packages (cons* nss-certs         ;for HTTPS access
                    gvfs              ;for user mounts
 		   sysfsutils
-                   xscreensaver
+                   xfce4-screensaver
+                   jfred:ladspa-bs2b
+                   ;;xscreensaver
                    flatpak
+                   xdg-desktop-portal-gtk
+                   i3-gaps
+                   i3status
+                   polybar
+                   network-manager-applet
+                   ;;wireguard-tools
                    %base-packages))
 
   ;; Add GNOME and/or Xfce---we can choose at the log-in
@@ -92,17 +121,32 @@
                    (service fprintd-service-type)
                    (service pcscd-service-type)
                    (service docker-service-type)
+                   (service earlyoom-service-type)
+                   (screen-locker-service xfce4-screensaver "xfce4-screensaver")
+                   (screen-locker-service xscreensaver)
+                   ;;(service dbus-root-service-type
+                   ;;         (dbus-configuration (services (list xfce4-screensaver))))
+                   ;;(service dbus-service)
                    (service bluetooth-service-type
                             (bluetooth-configuration
                              (auto-enable? #t)))
-                   (modify-services %desktop-services
-                                    (udev-service-type
-                                     config =>
-                                     (udev-configuration (inherit config)
-                                                         (rules (cons* libu2f-host
-                                                                       %trackpoint-udev-rule
-                                                                      (udev-configuration-rules config))))))))
+                   (service ladspa-service-type
+                            (ladspa-configuration (plugins (list jfred:ladspa-bs2b))))
                    ;;(modify-services %desktop-services
+                   ;;  (dbus-root-service-type
+                   ;;   config =>
+                   ;;   (dbus-configuration (inherit config)
+                   ;;                       (services (cons* xfce4-screensaver
+                   ;;                                        (dbus-configuration-services config))))))
+                   %powertop-service
+                   (modify-services %desktop-services
+                     (udev-service-type
+                      config =>
+                      (udev-configuration (inherit config)
+                                          (rules (cons* libu2f-host
+                                                        %trackpoint-udev-rule
+                                                        (udev-configuration-rules config))))))))
+  ;;(modify-services %desktop-services
                    ;;                 (udev-service-type config =>
                    ;;                                    (udev-configuration (inherit config)
                    ;;                                                        (rules (append (udev-configuration-rules config)

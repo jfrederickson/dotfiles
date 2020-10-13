@@ -20,6 +20,11 @@
 (load-theme 'base16-twilight)
 ;;(load-theme 'base16-tube)
 
+;;(load-theme 'base16-spacemacs)
+;;(load-theme 'base16-tomorrow-night-eighties)
+;;y(load-theme 'base16-google-dark)
+;;(load-theme 'base16-helios)
+;;(load-theme 'base16-chalk)
 ;;(load-theme 'flatui)
 ;;(load-theme 'tron)
 

@@ -4,7 +4,8 @@
 (load "jfred-packages.scm")
 
 (packages->manifest
- (append `(,jfred:python-linode-api4)
+ (append `(,jfred:python-linode-api4
+           ,jfred:ladspa-bs2b)
          (map (compose list specification->package+output)
               '("glibc-utf8-locales"
                 "gs-fonts"
@@ -28,7 +29,7 @@
                 "emacs-debbugs"
                 "git"
                 "git:send-email"
-                "guile@2.2"
+                "guile"
                 "guile-git"
                 "autoconf"
                 "font-adobe-source-code-pro"
@@ -48,7 +49,7 @@
                 "d-feet"
                 "python-django"
                 "python-netaddr"
-                "elixir"
+                ;; "elixir" ; failed build 2020-08-22
                 "emacs-elixir-mode"
                 "erlang"
                 "emacs-erlang"
@@ -58,12 +59,7 @@
                 "go"
                 "binutils"
                 "linux-libre-headers"
-                ;; ARM Hacking
-                "dfu-programmer"
-                "dfu-util"
-                "avr-binutils"
-                "avr-toolchain"
-                "arm-none-eabi-toolchain"
+                "gcc-toolchain"
                 ;; Blogging
                 "haunt"
                 ;; Devops
@@ -74,11 +70,15 @@
                 "debops"
                 ;; System Administration
                 "pwgen"
+                "mtr"
+                "postgresql"
                 ;;"terminator"
+                "emacs-vterm"
                 "lxc"
                 "htop"
                 "curl"
                 "wget"
+                "netcat-openbsd"
                 "the-silver-searcher"
                 "openssh"
                 "adb"
@@ -101,8 +101,10 @@
                 "toot"
                 "dino"
                 "gnunet"
+                "gnunet-gtk"
                 "gajim"
                 "mumble"
+                "polari"
                 ;;# Desktop
                 "gnome-tweaks"
                 "gnome-calendar"
@@ -113,17 +115,25 @@
                 "gnome-shell-extension-appindicator"
                 "gnome-shell-extension-dash-to-panel"
                 "matcha-theme"
+                "sound-theme-freedesktop"
                 ;;"claws-mail"
+                "geary"
+                "libreoffice"
                 "icecat"
+                "icedove"
+                ;;"ungoogled-chromium"
                 "gimp"
                 "inkscape"
                 "luakit"
                 "flatpak"
+                "xdg-dbus-proxy"
+                "deluge"
 
 
                 ;;"arc-theme"
                 "arc-icon-theme"
                 "dbus"
+                "chirp"
                 ;; Fonts
                 "font-google-noto"
                 "font-terminus"
@@ -144,8 +154,12 @@
                 "calibre"
                 ;; Fun
                 "emacs-ascii-art-to-unicode"
+                "filters"
                 ;; Gaming
                 "tintin++"
                 "powwow"
                 "harmonist-tk"
-                "minetest"))))
+                "minetest"
+                "supertuxkart"
+                "crawl"
+                "crawl-tiles"))))
