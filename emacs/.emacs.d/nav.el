@@ -108,3 +108,11 @@
 (when (eq system-type 'darwin) ;; mac specific settings
   (setq mac-option-modifier 'meta)
   (setq mac-command-modifier 'super))
+
+(setq yequake-frames
+      '(("Scratch" .
+         ((width . 0.85)
+          (height . 0.75)
+          (alpha . 0.95)
+          (buffer-fns . ("*scratch*"))
+          (frame-parameters . ((undecorated . t)))))))
