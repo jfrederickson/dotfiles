@@ -10,7 +10,7 @@
               '("glibc-utf8-locales"
                 "gs-fonts"
                 "font-dejavu"
-                "font-gnu-freefont-ttf"
+                "font-gnu-freefont"
                 "font-abattis-cantarell"
                 ;;Dotfiles management
                 "stow"
@@ -105,6 +105,8 @@
                 "gajim"
                 "mumble"
                 "polari"
+                "tor"
+                "quassel"
                 ;;# Desktop
                 "gnome-tweaks"
                 "gnome-calendar"
@@ -162,4 +164,5 @@
                 "minetest"
                 "supertuxkart"
                 "crawl"
-                "crawl-tiles"))))
+                "crawl-tiles"
+                "scummvm"))))
