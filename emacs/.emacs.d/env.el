@@ -61,3 +61,5 @@
 (setq mastodon-instance-url "https://mastodon.sdf.org")
 
 ;;(add-to-list 'debbugs-gnu-all-packages "guix-patches")
+
+(setq git-link-open-in-browser t)

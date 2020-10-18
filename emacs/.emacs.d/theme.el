@@ -13,11 +13,18 @@
 ;;(load-theme 'sourcerer)
 ;;(load-theme 'one-light)
 ;;(load-theme 'spacemacs-dark)
+;;(load-theme 'base16-default-light)
+;;(load-theme 'base16-eighties)
+;;(load-theme 'base16-tomorrow)
+;;(load-theme 'base16-chalk)
+(load-theme 'base16-twilight)
+;;(load-theme 'base16-tube)
+
 ;;(load-theme 'base16-spacemacs)
 ;;(load-theme 'base16-tomorrow-night-eighties)
 ;;y(load-theme 'base16-google-dark)
 ;;(load-theme 'base16-helios)
-(load-theme 'base16-chalk)
+;;(load-theme 'base16-chalk)
 ;;(load-theme 'flatui)
 ;;(load-theme 'tron)
 
@@ -33,6 +40,6 @@
 
 (set-face-attribute 'default nil
                     :family "Source Code Pro"
-                    :height 110
+                    :height 150
                     :weight 'normal
                     :width 'normal)
