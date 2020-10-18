@@ -36,7 +36,6 @@
 (setq inhibit-startup-message t)
 
 (setq-default cursor-type 'bar)
-;;(set-frame-font "-ADBO-Source Code Pro-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1")
 
 (if (eq system-type 'darwin)
     (setq jfred/font-height 150) ;; work laptop, retina display
