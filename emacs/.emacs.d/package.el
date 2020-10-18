@@ -133,3 +133,12 @@
   :ensure t)
 (use-package elfeed-protocol
   :ensure t)
+(use-package yequake
+  :ensure t)
+(use-package emojify
+  :ensure t
+  :hook (after-init . global-emojify-mode))
+(use-package mastodon
+  :ensure t)
+(use-package visual-fill-column
+  :ensure t)
