@@ -128,9 +128,9 @@
                    ;;(service dbus-root-service-type
                    ;;         (dbus-configuration (services (list xfce4-screensaver))))
                    ;;(service dbus-service)
-                   (service bluetooth-service-type
-                            (bluetooth-configuration
-                             (auto-enable? #t)))
+                   ;;(service bluetooth-service-type ;; removed temporarily due to bluetooth vuln
+                   ;;         (bluetooth-configuration
+                   ;;          (auto-enable? #t)))
                    (service ladspa-service-type
                             (ladspa-configuration (plugins (list jfred:ladspa-bs2b))))
                    ;;(modify-services %desktop-services
