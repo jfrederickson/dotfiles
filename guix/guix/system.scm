@@ -103,6 +103,7 @@
                    jfred:ladspa-bs2b
                    ;;xscreensaver
                    flatpak
+                   xdg-desktop-portal
                    xdg-desktop-portal-gtk
                    i3-gaps
                    i3status
