@@ -15,6 +15,7 @@
              (gnu services desktop)
              (gnu services linux)
              (gnu services sound)
+             (gnu packages pulseaudio)
              (gnu packages security-token)
              (gnu services security-token)
              (gnu packages certs)
@@ -43,6 +44,11 @@
   (file->udev-rule
     "99-nfc.rules"
     (local-file "udev/99-nfc.rules")))
+
+(define %light-udev-rule
+  (file->udev-rule
+    "90-backlight.rules"
+    (local-file "udev/90-backlight.rules")))
 
 (define %trackpoint-udev-rule
   (file->udev-rule
@@ -117,6 +123,9 @@
                    swayidle
                    swaylock
                    bemenu
+                   light
+                   wob
+                   pamixer
                    %base-packages))
 
   ;; Add GNOME and/or Xfce---we can choose at the log-in
@@ -159,6 +168,7 @@
                      (udev-configuration (inherit config)
                                          (rules (cons* libu2f-host
                                                        %trackpoint-udev-rule
+                                                       %light-udev-rule
                                                        (udev-configuration-rules config))))))))
   ;;(modify-services %desktop-services
                    ;;                 (udev-service-type config =>
@@ -167,4 +177,9 @@
                    ;;                                                                       (list %u2f-udev-rule %nfc-udev-rule))))))))
 
   ;; Allow resolution of '.local' host names with mDNS.
-  (name-service-switch %mdns-host-lookup-nss))
+  (name-service-switch %mdns-host-lookup-nss)
+
+  (setuid-programs (cons*
+                    #~(string-append #$swaylock "/bin/swaylock")
+                    #~(string-append #$light "/bin/light")
+                    %setuid-programs)))
