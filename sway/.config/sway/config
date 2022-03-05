@@ -61,6 +61,11 @@ input "1739:52619:SYNA8006:00_06CB:CD8B_Touchpad" {
       natural_scroll enabled
 }
 
+input "2321:21128:HTIX5288:00_0911:5288_Touchpad" {
+      tap enabled
+      natural_scroll enabled
+}
+
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
