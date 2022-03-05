@@ -8,7 +8,7 @@
            ,jfred:ladspa-bs2b)
          (map (compose list specification->package+output)
               '("glibc-utf8-locales"
-                "gs-fonts"
+                "font-ghostscript"
                 "font-dejavu"
                 "font-gnu-freefont"
                 "font-abattis-cantarell"
@@ -54,7 +54,7 @@
                 "erlang"
                 "emacs-erlang"
                 "ruby"
-                "ruby-rails"
+                ;;"ruby-rails"
                 "bundler"
                 "go"
                 "binutils"
@@ -67,7 +67,7 @@
                 "docker-cli"
                 "docker-compose"
                 "ansible"
-                "debops"
+                ;;"debops"
                 ;; System Administration
                 "pwgen"
                 "mtr"
@@ -86,7 +86,7 @@
                 "unzip"
                 "tinc"
                 "bind:utils"
-                "fprintd"
+                ;;"fprintd"
                 "encfs"
                 "qrencode"
                 "openjdk"
@@ -96,7 +96,7 @@
                 ;;"git-crypt" ; broken build
                 ;; Messaging
                 "mu"
-                "offlineimap"
+                "offlineimap3"
                 "quaternion"
                 "toot"
                 "dino"
@@ -108,7 +108,7 @@
                 "tor"
                 "quassel"
                 ;;# Desktop
-                "gnome-tweaks"
+                ;;"gnome-tweaks"
                 "gnome-calendar"
                 "gnome-keyring"
                 "gnome-bluetooth"
@@ -119,7 +119,7 @@
                 "matcha-theme"
                 "sound-theme-freedesktop"
                 ;;"claws-mail"
-                "geary"
+                ;;"geary"
                 "libreoffice"
                 "icecat"
                 "icedove"
@@ -160,7 +160,7 @@
                 ;; Gaming
                 "tintin++"
                 "powwow"
-                "harmonist-tk"
+                ;;"harmonist-tk"
                 "minetest"
                 "supertuxkart"
                 "crawl"
