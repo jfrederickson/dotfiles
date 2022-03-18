@@ -10,9 +10,11 @@
   (gnu services)
   (guix build-system copy)
   (guix gexp)
-  (gnu home services shells))
+  (gnu home services shells)
+  (gnu home services shepherd))
 
 (load "../jfred-packages.scm")
+(load "./services.scm")
 
 (home-environment
  (packages
@@ -177,4 +179,8 @@
               (bash-profile
                 (list (local-file
                         "/home/jfred/guix/home/.bash_profile"
-                        "bash_profile"))))))))
+                        "bash_profile")))))
+          (service home-shepherd-service-type
+                   (home-shepherd-configuration
+                    (services
+                     (list kanshi-service)))))))
