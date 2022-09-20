@@ -99,6 +99,7 @@
   (packages (cons* nss-certs         ;for HTTPS access
                    gvfs              ;for user mounts
 		   sysfsutils
+                   glib-networking
                    xfce4-screensaver
                    jfred:ladspa-bs2b
                    ;;xscreensaver
@@ -119,7 +120,7 @@
   (services (cons* (service gnome-desktop-service-type)
 		   (service xfce-desktop-service-type)
                    (service mate-desktop-service-type)
-                   (service fprintd-service-type)
+                   ;;(service fprintd-service-type)
                    (service pcscd-service-type)
                    (service docker-service-type)
                    (service earlyoom-service-type)
