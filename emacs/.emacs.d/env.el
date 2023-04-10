@@ -17,13 +17,13 @@
 
 ;; Set up org-mode the way I want it
 (setq org-directory "~/org")
-(setq org-agenda-files (mapcar (lambda (x) (concat org-directory x)) '("/inbox.org" "/gtd-active.org" "/gtd-next.org" "/gtd-someday.org")))
-(setq org-refiles-jfred (mapcar (lambda (x) (concat org-directory x)) '("/inbox.org" "/gtd-active.org" "/gtd-next.org" "/gtd-someday.org" "/gtd-complete.org")))
+(setq org-agenda-files (mapcar (lambda (x) (concat org-directory x)) '("/Inbox.org" "/Next.org" "/Someday.org" "/Recurring.org")))
+(setq org-refiles-jfred (mapcar (lambda (x) (concat org-directory x)) '("/Inbox.org" "/Next.org" "/Someday.org" "/Complete.org" "/Recurring.org")))
 (setq org-refile-targets '((org-refiles-jfred :maxlevel . 1)))
 (setq org-outline-path-complete-in-steps nil)
-(setq org-default-notes-file (concat org-directory "/inbox.org"))
+(setq org-default-notes-file (concat org-directory "/Inbox.org"))
 (setq org-capture-templates
-      '(("t" "Todo" entry (file "~/org/inbox.org")
+      '(("t" "Todo" entry (file "~/org/Inbox.org")
          "* TODO %?\n  %a")
         ("j" "Journal" entry (file+olp+datetree "~/org/journal.org")
          "* %?\nEntered on %U\n  %i\n  %a")))
@@ -58,8 +58,27 @@
    ))
 
 ;; Mastodon settings
-(setq mastodon-instance-url "https://mastodon.sdf.org")
+(setq mastodon-instance-url "https://jawns.club")
+(setq mastodon-active-user "jfred")
 
 ;;(add-to-list 'debbugs-gnu-all-packages "guix-patches")
 
 (setq git-link-open-in-browser t)
+(setq warning-minimum-level :error)
+
+(with-eval-after-load 'mu4e (setq mu4e-contexts
+                                  `( ,(make-mu4e-context
+                                       :name "Personal"
+                                       :enter-func (lambda () (mu4e-message "Entering Personal context"))
+                                       :leave-func (lambda () (mu4e-message "Leaving Personal context"))
+                                       ;; we match based on the contact-fields of the message
+                                       :match-func (lambda (msg)
+                                                     (when msg
+                                                       (mu4e-message-contact-field-matches msg
+                                                                                           :to "jonathan@terracrypt.net")))
+                                       :vars '( ( user-mail-address	    . "jonathan@terracrypt.net"  )
+                                                ( user-full-name	    . "Jonathan Frederickson" )
+                                                ( mu4e-compose-signature .
+                                                  (concat
+                                                   "Jonathan Frederickson\n")))))))
+(setq mu4e-compose-format-flowed t)

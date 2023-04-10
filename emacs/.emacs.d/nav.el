@@ -122,7 +122,7 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-x g b") 'helm-bookmarks)
+;;(global-set-key (kbd "C-x g b") 'helm-bookmarks)
 
 ;; Dash keybindings
 (global-set-key (kbd "C-x ?") 'helm-dash)

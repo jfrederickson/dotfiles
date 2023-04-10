@@ -6,25 +6,28 @@
 
 (use-package quelpa
   :ensure t)
-(use-package quelpa-use-package
-  :ensure t)
+;;(use-package quelpa-use-package
+;;  :ensure t)
 
-(require 'quelpa-use-package)
+;;(require 'quelpa-use-package)
 
-(use-package matrix-client
-  :quelpa ((matrix-client :fetcher github :repo "alphapapa/matrix-client-el"
-                          :files (:defaults "logo.png" "matrix-client-standalone.el.sh"))))
+;;(use-package matrix-client
+;;  :quelpa ((matrix-client :fetcher github :repo "alphapapa/matrix-client-el"
+;;                          :files (:defaults "logo.png" "matrix-client-standalone.el.sh"))))
 (use-package xterm-color
   :ensure t)
-(use-package rmoo
-  :quelpa ((rmoo :fetcher github :repo "lisdude/rmoo")))
+;;(use-package rmoo
+;;  :quelpa ((rmoo :fetcher github :repo "lisdude/rmoo")))
 
-(use-package sunrise-commander
-  :quelpa (sunrise-commander :fetcher github :repo "escherdragon/sunrise-commander"))
+;;(use-package sunrise-commander
+;;  :quelpa (sunrise-commander :fetcher github :repo "escherdragon/sunrise-commander"))
+;;
+;;(use-package spotify
+;;  :quelpa (spotify :fetcher github :repo "danielfm/spotify.el"))
 
-(use-package spotify
-  :quelpa (spotify :fetcher github :repo "danielfm/spotify.el"))
-
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1))
 (use-package git-link
   :ensure t)
 (use-package json-mode
@@ -149,4 +152,8 @@
 (use-package mastodon
   :ensure t)
 (use-package visual-fill-column
+  :ensure t)
+(use-package racket-mode
+  :ensure t)
+(use-package fennel-mode
   :ensure t)

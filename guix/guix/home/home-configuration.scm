@@ -41,8 +41,10 @@
                 "emacs"
                 "emacs-debbugs"
                 "git"
+                "git-lfs"
                 "git:send-email"
                 "guile@3.0.7"
+                "guile-aiscm"
                 "guile-git"
                 "autoconf"
                 "font-adobe-source-code-pro"
@@ -162,7 +164,18 @@
                 "scummvm"
                 "nheko"
                 "python-diceware"
-                "rbw")))
+                ;;"rbw"
+                "fastboot"
+                "skribilo"
+                "texlive"
+                "lyx"
+                "cool-retro-term"
+                "syncthing"
+                "syncthing-gtk"
+                "capnproto"
+                "qgis"
+                "guile-hall"
+                "ungoogled-chromium")))
   (services
     (list (service
             home-bash-service-type
