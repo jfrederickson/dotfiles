@@ -207,3 +207,5 @@
           (alpha . 0.95)
           (buffer-fns . ("*scratch*"))
           (frame-parameters . ((undecorated . t)))))))
+
+(global-set-key (kbd "C-;") 'er/expand-region)
