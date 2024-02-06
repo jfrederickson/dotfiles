@@ -6,14 +6,14 @@
   (with-temp-buffer (write-file custom-file)))
 (load custom-file)
 
-(require 'package)
-(add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
+;;(require 'package)
+;;(add-to-list 'package-archives
+;;	     '("melpa" . "https://melpa.org/packages/") t)
+;;(package-initialize)
 
 ;; Get the package list from package.el
 ;; custom.el is updated automatically but isn't tracked in git
-(load "~/.emacs.d/package.el")
+;;(load "~/.emacs.d/package.el")
 
 ;; Set up the environment
 (load "~/.emacs.d/env.el")
