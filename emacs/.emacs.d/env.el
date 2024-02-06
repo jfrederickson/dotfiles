@@ -23,10 +23,15 @@
 (setq org-outline-path-complete-in-steps nil)
 (setq org-default-notes-file (concat org-directory "/inbox.org"))
 (setq org-capture-templates
-      '(("t" "Todo" entry (file "~/org/inbox.org")
+      '(("t" "Todo")
+        ("tl" "Todo - link to this file" entry (file "~/org/inbox.org")
          "* TODO %?\n  %a")
+        ("tn" "Todo - no link" entry (file "~/org/inbox.org")
+         "* TODO %?")
         ("j" "Journal" entry (file+olp+datetree "~/org/journal.org")
-         "* %?\nEntered on %U\n  %i\n  %a")))
+         "* %?\nEntered on %U\n  %i\n  %a")
+        ("m" "Meeting Notes" entry (file+olp+datetree "~/org/meetings.org")
+         "* Meeting Notes - %?")))
 
 ;; Window transparency
 ;;(set-frame-parameter (selected-frame) 'alpha '(90 . 90))
