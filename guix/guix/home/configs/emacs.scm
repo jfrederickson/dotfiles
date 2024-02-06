@@ -17,6 +17,10 @@
              "emacs-dockerfile-mode"
              "emacs-expand-region"
              "emacs-helm"
-             "emacs-cyberpunk-theme")))
+             "emacs-cyberpunk-theme"
+             "emacs-doom-modeline"
+             "emacs-exec-path-from-shell"
+             "emacs-better-defaults"
+             "emacs-projectile")))
 
 
