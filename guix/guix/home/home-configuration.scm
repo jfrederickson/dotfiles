@@ -18,7 +18,6 @@
 
 (home-environment
  (packages
-  (append `(,linux-run)
           (map (compose list specification->package+output)
                (list ;;"python-linode-api4"
 	        "cryptsetup"
@@ -42,8 +41,10 @@
                 "emacs"
                 "emacs-debbugs"
                 "git"
+                "git-lfs"
                 "git:send-email"
                 "guile@3.0.7"
+                "guile-aiscm"
                 "guile-git"
                 "autoconf"
                 "font-adobe-source-code-pro"
@@ -56,7 +57,7 @@
                 "python-virtualenv"
                 "emacs-jedi"
                 "python-jedi"
-                "gobject-introspection"
+                ;;"gobject-introspection"
 	        "gnome-tweaks"
                 "python-pygobject"
                 "python-pygpgme"
@@ -104,8 +105,8 @@
                 "quaternion"
                 "toot"
                 "dino"
-                "gnunet"
-                "gnunet-gtk"
+                ;;"gnunet"
+                ;;"gnunet-gtk"
                 "gajim"
                 "mumble"
                 "polari"
@@ -131,7 +132,7 @@
                 "deluge"
                 "arc-icon-theme"
                 "dbus"
-                "chirp"
+                ;;"chirp"
                 "font-google-noto"
                 "font-terminus"
                 "font-liberation"
@@ -145,7 +146,7 @@
                 "gst-plugins-good"
                 "gst-plugins-ugly"
                 "gpodder"
-                "shotwell"
+                ;;"shotwell"
                 "youtube-dl"
                 "calibre"
                 "emacs-ascii-art-to-unicode"
@@ -163,7 +164,18 @@
                 "scummvm"
                 "nheko"
                 "python-diceware"
-                "rbw"))))
+                ;;"rbw"
+                "fastboot"
+                "skribilo"
+                "texlive"
+                "lyx"
+                "cool-retro-term"
+                "syncthing"
+                "syncthing-gtk"
+                "capnproto"
+                "qgis"
+                "guile-hall"
+                "ungoogled-chromium")))
   (services
     (list (service
             home-bash-service-type
