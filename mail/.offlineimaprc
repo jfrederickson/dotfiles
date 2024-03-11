@@ -8,7 +8,8 @@ localrepository = LocalFastmail
 remoterepository = RepositoryFastmail
 autorefresh = 5
 quick = 10
-postsynchook = mu index --maildir ~/Maildir
+#postsynchook = mu index --maildir ~/Maildir
+postsynchook = mu index
 
 [Repository LocalFastmail]
 type = Maildir
@@ -25,5 +26,6 @@ tls_level = tls_secure
 ssl_version = tls1_2
 
 ## Guix CA cert file - I've installed mu4e through Guix
-sslcacertfile = ~/.guix-profile/etc/ssl/certs/ca-certificates.crt
+#sslcacertfile = ~/.guix-profile/etc/ssl/certs/ca-certificates.crt
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 

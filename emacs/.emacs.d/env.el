@@ -70,6 +70,13 @@
 (setq git-link-open-in-browser t)
 (setq warning-minimum-level :error)
 
+;; Send mail using SMTP via mail.example.org.
+(setq smtpmail-smtp-server "smtp.fastmail.com")
+
+;; Send mail using SMTP on the mail submission port 587.
+(setq smtpmail-smtp-service 465)
+
+
 (with-eval-after-load 'mu4e (setq mu4e-contexts
                                   `( ,(make-mu4e-context
                                        :name "Personal"
