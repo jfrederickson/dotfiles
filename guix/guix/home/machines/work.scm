@@ -5,4 +5,5 @@
 
 (home-environment
  (packages
-  (append %base-packages %emacs-packages)))
+  (append %jfred-packages %emacs-packages))
+ (services %jfred-services))
