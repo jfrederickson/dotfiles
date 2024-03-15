@@ -3,5 +3,9 @@
 
 (define-public %base-packages
   (map (compose list specification->package+output)
-       (list "emacs"
-             "glibc-locales")))
+       (list "emacs-pgtk"
+             "glibc-locales"
+             "nss-certs"
+             "font-adobe-source-code-pro"
+             "guile"
+             "guile-goblins")))

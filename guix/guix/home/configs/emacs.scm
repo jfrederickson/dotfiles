@@ -21,6 +21,8 @@
              "emacs-doom-modeline"
              "emacs-exec-path-from-shell"
              "emacs-better-defaults"
-             "emacs-projectile")))
+             "emacs-projectile"
+             "emacs-elpy"
+             "emacs-geiser")))
 
 
