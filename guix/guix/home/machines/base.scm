@@ -15,7 +15,8 @@
              "nss-certs"
              "font-adobe-source-code-pro"
              "guile"
-             "guile-goblins")))
+             "guile-goblins"
+             "direnv")))
 
 ;;(define-public %jfred-services
 ;;  (list (service home-bash-service-type
@@ -27,5 +28,6 @@
   (list (service home-bash-service-type
                  (home-bash-configuration
                   (bash-profile
-                   (list (local-file "../configs/bash_profile")))))
-        (service home-ssh-agent-service-type)))
+                   (list (local-file "../configs/bash_profile")))
+                  (bashrc
+                   (list (local-file "../configs/bashrc")))))        (service home-ssh-agent-service-type)))

@@ -25,4 +25,5 @@
              "emacs-elpy"
              "emacs-yaml-mode"
              "emacs-markdown-mode"
-             "emacs-terraform-mode")))
+             "emacs-terraform-mode"
+             "emacs-geiser-guile")))
