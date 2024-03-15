@@ -23,6 +23,6 @@
              "emacs-better-defaults"
              "emacs-projectile"
              "emacs-elpy"
-             "emacs-geiser")))
-
-
+             "emacs-yaml-mode"
+             "emacs-markdown-mode"
+             "emacs-terraform-mode")))
