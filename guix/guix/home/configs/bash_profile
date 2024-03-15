@@ -1,0 +1,13 @@
+export JFREDTEST=true
+export GUIX_LOCPATH=$HOME/.guix-home/profile/lib/locale
+
+pathappend() {
+  for ARG in "$@"
+  do
+    if [ -d "$ARG" ] && [[ ":$PATH:" != *":$ARG:"* ]]; then
+        PATH="${PATH:+"$PATH:"}$ARG"
+    fi
+  done
+}
+
+pathappend $HOME/.local/bin $HOME/.gem/ruby/2.7.0/bin

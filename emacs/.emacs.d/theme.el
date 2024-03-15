@@ -5,6 +5,7 @@
 ;; Modeline
 ;;(require 'doom-modeline)
 ;;(doom-modeline-init)
+(doom-modeline-mode)
 
 ;; Theme
 (load-theme 'cyberpunk t)
@@ -23,3 +24,12 @@
                     :height jfred/font-height
                     :weight 'normal
                     :width 'normal)
+
+
+;;(set-face-attribute 'default nil
+;;                    :family "Miracode"
+;;                    :height 150
+;;                    :weight 'bold
+;;                    :width 'normal)
+
+(setq-default line-spacing 0)
