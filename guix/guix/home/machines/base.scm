@@ -18,16 +18,11 @@
              "guile-goblins"
              "direnv")))
 
-;;(define-public %jfred-services
-;;  (list (service home-bash-service-type
-;;                 (home-bash-configuration
-;;                  (bash-profile
-;;                   (list (local-file "../configs/bash_profile")))))))
-
 (define-public %jfred-services
   (list (service home-bash-service-type
                  (home-bash-configuration
                   (bash-profile
                    (list (local-file "../configs/bash_profile")))
                   (bashrc
-                   (list (local-file "../configs/bashrc")))))        (service home-ssh-agent-service-type)))
+                   (list (local-file "../configs/bashrc")))))
+        (service home-ssh-agent-service-type)))
