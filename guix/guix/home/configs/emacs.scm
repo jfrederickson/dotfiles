@@ -26,4 +26,5 @@
              "emacs-yaml-mode"
              "emacs-markdown-mode"
              "emacs-terraform-mode"
-             "emacs-geiser-guile")))
+             "emacs-geiser-guile"
+             "emacs-org-present")))
