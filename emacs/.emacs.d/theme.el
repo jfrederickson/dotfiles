@@ -5,10 +5,12 @@
 ;; Modeline
 ;;(require 'doom-modeline)
 ;;(doom-modeline-init)
-(doom-modeline-mode)
+;;(doom-modeline-mode)
 
 ;; Theme
-(load-theme 'cyberpunk t)
+;;(load-theme 'cyberpunk t)
+;;(load-theme 'one-light t)
+(load-theme 'modus-operandi t)
 
 ;; Don't show the startup message when emacs starts
 (setq inhibit-startup-message t)

@@ -2,9 +2,10 @@
   #:use-module (gnu home)
   #:use-module (home configs emacs)
   #:use-module (home configs syncthing)
-  #:use-module (home machines base))
+  #:use-module (home machines base)
+  #:use-module (home machines personal))
 
 (home-environment
  (packages
-  (append %base-packages %emacs-packages))
+  (append %jfred-packages %jfred-personal-packages %emacs-packages))
  (services %syncthing-services))

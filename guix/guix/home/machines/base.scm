@@ -15,8 +15,9 @@
              "nss-certs"
              "font-adobe-source-code-pro"
              "guile"
-             "guile-goblins"
-             "direnv")))
+             ;;"guile-goblins"
+             "direnv"
+             "sicp")))
 
 (define-public %jfred-services
   (list (service home-bash-service-type
