@@ -26,7 +26,8 @@
              "guile"
              "guile-goblins"
              "grimshot"
-             "direnv")))
+             "direnv"
+             "sicp")))
 
 (define-public %jfred-services
   (list (service home-bash-service-type

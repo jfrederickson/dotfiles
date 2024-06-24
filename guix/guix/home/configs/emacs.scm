@@ -3,7 +3,8 @@
 
 (define-public %emacs-packages
   (map (compose list specification->package+output)
-       (list "emacs-git-link"
+       (list "emacs-guix"
+             "emacs-git-link"
              "emacs-json-mode"
              "emacs-groovy-modes"
              "emacs-jenkinsfile-mode"
@@ -29,4 +30,5 @@
              "emacs-geiser-guile"
              "emacs-org-present"
              "emacs-org-reveal"
-             "emacs-htmlize")))
+             "emacs-htmlize"
+             "emacs-lispy")))

@@ -7,3 +7,7 @@ work:
 .PHONY: tablet
 tablet:
 	guix home reconfigure ./home/machines/tablet.scm
+
+.PHONY: reform
+reform:
+	guix home reconfigure ./home/machines/reform.scm
