@@ -4,6 +4,8 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -14,7 +16,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -64,6 +66,21 @@ input "1739:52619:SYNA8006:00_06CB:CD8B_Touchpad" {
 input "2321:21128:HTIX5288:00_0911:5288_Touchpad" {
       tap enabled
       natural_scroll enabled
+}
+
+input "1267:12572:DELL097E:00_04F3:311C_Touchpad" {
+      tap enabled
+      natural_scroll enabled
+}
+
+input "1133:45085:Logitech_MX_Ergo_Multi-Device_Trackball" {
+      pointer_accel 0.75
+}
+
+input type:keyboard {
+  # Capslock key should work as escape key
+  # See /usr/share/X11/xkb/rules/xorg.lst for options
+  xkb_options ctrl:nocaps
 }
 
 #
@@ -243,6 +260,7 @@ set $ws1 "Slack"
 bindsym Ctrl+Alt+l exec 'swaylock -i /home/jfred/Pictures/wallpaper/dennoucoil.jpeg'
 bindsym Ctrl+Alt+a exec "j4-dmenu-desktop --dmenu=bemenu"
 bindsym $mod+d exec "wofi --show drun"
+bindsym $mod+Shift+s "grimshot save screen"
 
 bindsym $mod+Control+Shift+Right move workspace to output right
 bindsym $mod+Control+Shift+Left move workspace to output left
