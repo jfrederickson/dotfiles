@@ -1,4 +1,4 @@
-(define-module (system machines hardware terracard)
+(define-module (system machines terracard hardware-configuration)
   #:use-module (gnu)
   #:use-module (nongnu packages linux)
   #:use-module (gnu packages wm))
