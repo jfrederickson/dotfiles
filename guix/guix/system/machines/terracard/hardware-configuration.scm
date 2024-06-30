@@ -1,10 +1,12 @@
 (define-module (system machines terracard hardware-configuration)
   #:use-module (gnu)
   #:use-module (nongnu packages linux)
-  #:use-module (gnu packages wm))
+  #:use-module (gnu packages wm)
+  #:use-module (system machines desktop-base))
 
 (define-public hardware-configuration
   (operating-system
+   (inherit jfred-desktop-base-system)
    (kernel linux)
    (firmware (list linux-firmware))
    (keyboard-layout (keyboard-layout "us"))
