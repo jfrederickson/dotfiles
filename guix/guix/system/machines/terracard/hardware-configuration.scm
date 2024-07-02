@@ -35,5 +35,10 @@
                          (device "/dev/mapper/cryptroot")
                          (type "ext4")
                          (dependencies mapped-devices)) %base-file-systems))
+   (swap-devices
+    (list
+     (swap-space
+      (target "/swapfile")
+      (dependencies mapped-devices))))
 
    (host-name #f)))
