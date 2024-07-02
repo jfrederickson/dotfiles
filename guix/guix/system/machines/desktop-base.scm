@@ -5,6 +5,7 @@
   #:use-module (gnu services desktop)
   #:use-module (gnu services cups)
   #:use-module (gnu services networking)
+  #:use-module (gnu services security-token)
   #:use-module (gnu services ssh))
 
 (define-public jfred-desktop-base-system
@@ -35,9 +36,10 @@
                       (program (file-append swaylock "/bin/swaylock"))
                       (using-setuid? #f)
                       (using-pam? #t)))
-                 (set-xorg-configuration
-                  (xorg-configuration (keyboard-layout
-                                       keyboard-layout))))
+            (service pcscd-service-type)
+            (set-xorg-configuration
+             (xorg-configuration (keyboard-layout
+                                  keyboard-layout))))
 
            ;; This is the default list of services we
            ;; are appending to.
