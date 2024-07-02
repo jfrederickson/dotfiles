@@ -27,7 +27,12 @@
              "guile-goblins"
              "grimshot"
              "direnv"
-             "sicp")))
+             "stow"
+             "git"
+             "make"
+             "sicp"
+             "gnupg"
+             "openssh")))
 
 (define-public %jfred-services
   (list (service home-bash-service-type
