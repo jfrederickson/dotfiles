@@ -22,11 +22,17 @@ set $term foot
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
+gaps inner 10
+default_border pixel 3
+client.focused ffffffcc ffffffcc ffffffcc
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/default.png fill
 #output * bg /home/jfred/Pictures/wallpaper/dennoucoil.jpeg fill
+output * bg /home/jfrederi/Pictures/wallpapers/wp5540051.jpg fill
+output * bg /home/jfrederi/Pictures/wallpapers/Fantasy-library-art.jpg fill
 #
 # Example configuration:
 #
