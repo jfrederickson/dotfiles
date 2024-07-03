@@ -5,6 +5,7 @@
   #:use-module (home configs emacs)
   #:use-module (home configs gnupg)
   #:use-module (home configs syncthing)
+  #:use-module (home configs sway)
   #:use-module (home machines base)
   #:use-module (gnu packages ebook))
 
@@ -22,4 +23,5 @@
   (append %jfred-services
           %jfred-home-channels
           %syncthing-services
+          %sway-config-services
           %jfred-gnupg-services)))
