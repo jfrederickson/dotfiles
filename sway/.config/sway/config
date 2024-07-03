@@ -31,8 +31,9 @@ client.focused ffffffcc ffffffcc ffffffcc
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/default.png fill
 #output * bg /home/jfred/Pictures/wallpaper/dennoucoil.jpeg fill
-output * bg /home/jfrederi/Pictures/wallpapers/wp5540051.jpg fill
-output * bg /home/jfrederi/Pictures/wallpapers/Fantasy-library-art.jpg fill
+#output * bg /home/jfrederi/Pictures/wallpapers/wp5540051.jpg fill
+#output * bg /home/jfrederi/Pictures/wallpapers/Fantasy-library-art.jpg fill
+output * bg ~/.wallpapers/user-manual.jpg fill
 #
 # Example configuration:
 #
@@ -263,7 +264,7 @@ include /etc/sway/config.d/*
 
 set $ws1 "Slack"
 
-bindsym Ctrl+Alt+l exec 'swaylock -i /home/jfred/Pictures/wallpaper/dennoucoil.jpeg'
+bindsym Ctrl+Alt+l exec "swaylock -i ~/.wallpapers/user-manual.jpg"
 bindsym Ctrl+Alt+a exec "j4-dmenu-desktop --dmenu=bemenu"
 bindsym $mod+d exec "wofi --show drun"
 bindsym $mod+Shift+s "grimshot save screen"
