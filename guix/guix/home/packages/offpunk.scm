@@ -35,7 +35,7 @@
           python-cryptography
           python-requests
           python-beautifulsoup4
-          python-readability
+          python-readability-lxml
           python-feedparser
           chafa))
    (synopsis "An offline first command-line browser for the smolnet")
