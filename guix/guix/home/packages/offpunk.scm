@@ -28,16 +28,17 @@
     (list #:tests? #f))
    (native-inputs
     (list python-hatchling))
-   (inputs
+   (propagated-inputs
     (list less
           file
-          xdg-utils
-          python-cryptography
+          chafa
+          xdg-utils))
+   (inputs
+    (list python-cryptography
           python-requests
           python-beautifulsoup4
           python-readability-lxml
-          python-feedparser
-          chafa))
+          python-feedparser))
    (synopsis "An offline first command-line browser for the smolnet")
    (description "A command-line and offline-first smolnet browser/feed reader for Gemini, Gopher, Spartan and Web by Ploum.
 
