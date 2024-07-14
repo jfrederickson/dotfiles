@@ -2,6 +2,7 @@
   #:use-module (gnu packages wm)
   #:use-module (gnu packages pulseaudio)
   #:use-module (gnu packages terminals)
+  #:use-module (gnu packages web-browsers)
   #:use-module (gnu packages xdisorg)
   #:use-module (nongnu packages mozilla))
 
@@ -13,4 +14,5 @@
         wofi
         waybar
         pavucontrol
-        firefox))
+        firefox
+        nyxt))
