@@ -31,4 +31,7 @@
              "emacs-org-present"
              "emacs-org-reveal"
              "emacs-htmlize"
-             "emacs-lispy")))
+             "emacs-lispy"
+             "emacs-vertico"
+             "emacs-consult"
+             "emacs-emprise")))
