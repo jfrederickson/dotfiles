@@ -277,10 +277,10 @@ bindsym $mod+Control+Shift+Up move workspace to output up
 # Doesn't seem to work atm
 #bindsym XF86MonBrightnessUp exec sudo light -A 10
 #bindsym XF86MonBrightnessDown exec sudo light -U 10
-exec swayidle -w timeout 300 'swaylock -f -i /home/jfred/Pictures/wallpaper/dennoucoil.jpeg' \
+exec swayidle -w timeout 300 'swaylock -f -i ~/.wallpapers/user-manual.jpg' \
      timeout 10 'if pgrep swaylock; then swaymsg "output * dpms off"; fi' \
      resume 'swaymsg "output * dpms on"' \
-     before-sleep 'swaylock -f -i /home/jfred/Pictures/wallpaper/dennoucoil.jpeg'
+     before-sleep 'swaylock -f -i ~/.wallpapers/user-manual.jpg'
      
 exec_always "systemctl --user restart kanshi.service"
 
