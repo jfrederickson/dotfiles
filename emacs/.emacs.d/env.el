@@ -12,6 +12,9 @@
 ;; Enable project awareness
 (projectile-mode)
 
+;; Fuzzy completion
+(setq completion-styles '(basic partial-completion emacs22 flex))
+
 ;; Enable my common docsets in helm-dash
 (setq helm-dash-docsets '("SaltStack" "Kubernetes" "Python 3"))
 
