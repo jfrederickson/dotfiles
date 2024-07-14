@@ -33,7 +33,7 @@
          "* Meeting Notes - %?")))
 
 ;; Window transparency
-(set-frame-parameter (selected-frame) 'alpha '(97 . 97))
+(set-frame-parameter (selected-frame) 'alpha-background 80)
 ;;(add-to-list 'default-frame-alist '(alpha . (90 . 90)))
 
 (defun toggle-transparency ()
