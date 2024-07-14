@@ -118,11 +118,10 @@
 (define-key ctl-x-4-map "t" 'toggle-window-split)
 (global-set-key (kbd "C-x |") 'toggle-window-split)
 
-;; Helm keybindings
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-;;(global-set-key (kbd "C-x g b") 'helm-bookmarks)
+(setq completion-ignore-case 't)
+(vertico-mode)
+(global-set-key (kbd "C-x C-b") 'consult-buffer)
+(global-set-key (kbd "C-x C-f") 'find-file)
 
 ;; Dash keybindings
 (global-set-key (kbd "C-x ?") 'helm-dash)

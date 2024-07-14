@@ -7,5 +7,9 @@
 
 (home-environment
  (packages
-  (append %jfred-packages %jfred-personal-packages %emacs-packages))
- (services %syncthing-services))
+  (append %jfred-packages
+          %jfred-personal-packages
+          %jfred-desktop-packages
+          %emacs-packages))
+ (services
+  (append %jfred-services %syncthing-services)))
