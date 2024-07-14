@@ -21,3 +21,8 @@ profile {
         output "Goldstar Company Ltd LG Ultra HD 0x00002C77" enable mode 3840x2160 position 0,0 scale 1.5
         output eDP-1 disable
 }
+
+profile {
+        output "Goldstar Company Ltd LG Ultra HD 0x0000DF13" enable mode 3840x2160 position 0,0 scale 1.5
+        output eDP-1 disable
+}
