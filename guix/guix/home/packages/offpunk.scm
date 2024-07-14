@@ -47,5 +47,3 @@ day, a week, a month) and then browse/organise it while staying
 disconnected.")
    (home-page "https://sr.ht/~lioploum/offpunk/")
    (license agpl3)))
-
-offpunk

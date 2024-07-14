@@ -7,13 +7,15 @@
   #:use-module (home configs syncthing)
   #:use-module (home configs sway)
   #:use-module (home machines base)
+  #:use-module (home packages offpunk)
   #:use-module (gnu packages ebook)
   #:use-module (gnu packages inkscape))
 
 (define-public %jfred-personal-packages
   (list
    calibre
-   inkscape))
+   inkscape
+   offpunk))
 
 (home-environment
  (packages
