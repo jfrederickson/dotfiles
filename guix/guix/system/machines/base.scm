@@ -2,7 +2,7 @@
   #:use-module (guix gexp)
   #:use-module (gnu))
 
-(define (jfred-append-base-services base)
+(define-public (jfred-append-base-services base)
   (modify-services base
     (guix-service-type config =>
                        (guix-configuration
