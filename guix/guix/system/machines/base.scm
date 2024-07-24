@@ -14,5 +14,6 @@
                                 "https://bordeaux.guix.gnu.org"))
                         (authorized-keys
                          (append (list (local-file "../keyring/terracard.pub")
-                                       (local-file "../keyring/wired.pub"))
+                                       (local-file "../keyring/wired.pub")
+                                       (local-file "../keyring/nonguix.pub"))
                                  %default-authorized-guix-keys))))))
