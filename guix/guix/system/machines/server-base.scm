@@ -1,5 +1,4 @@
-(define-module (system machines desktop-base)
-  #:use-module (system machines base)
+(define-module (system machines server-base)
   #:use-module (srfi srfi-1)
   #:use-module (guix gexp)
   #:use-module (gnu)
@@ -10,7 +9,23 @@
   #:use-module (gnu services networking)
   #:use-module (gnu services security-token)
   #:use-module (gnu services sddm)
-  #:use-module (gnu services ssh))
+  #:use-module (gnu services ssh)
+  #:use-module (system machines base))
+
+(define (jfred-append-base-services base)
+  (modify-services base
+    (guix-service-type config =>
+                       (guix-configuration
+                        (inherit config)
+                        ;; Fetch substitutes from example.org.
+                        (substitute-urls
+                          (list "https://substitutes.nonguix.org"
+                                "https://ci.guix.gnu.org"
+                                "https://bordeaux.guix.gnu.org"))
+                        (authorized-keys
+                         (append (list (local-file "../keyring/terracard.pub")
+                                       (local-file "../keyring/wired.pub"))
+                                 %default-authorized-guix-keys))))))
 
 (define-public jfred-desktop-base-system
   (operating-system
@@ -41,14 +56,4 @@
                       (using-setuid? #f)
                       (using-pam? #t)))
             (service pcscd-service-type))
-            ;;(set-xorg-configuration
-            ;; (xorg-configuration (keyboard-layout
-            ;;                      keyboard-layout))))
-
-           ;; This is the default list of services we
-           ;; are appending to.
-           (remove (lambda (service)
-                     (eq? (service-kind service) gdm-service-type))
-                   (jfred-append-base-services %desktop-services))))))
-;;           (modify-services %desktop-services
-;;                            (delete gdm-service-type))))))
+           (jfred-append-base-services %base-services))))
