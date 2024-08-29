@@ -6,6 +6,10 @@
 
 exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
+# display config for MNT Pocket Reform
+output DSI-1 transform 270
+output DSI-1 scale 2
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
