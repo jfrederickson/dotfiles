@@ -1,3 +1,4 @@
+
 (define-module (home machines personal)
   #:use-module (gnu home)
   #:use-module (home configs channels)
@@ -13,8 +14,8 @@
 
 (define-public %jfred-personal-packages
   (list
-   calibre
-   inkscape
+   ;;calibre
+   ;;inkscape
    offpunk))
 
 (home-environment

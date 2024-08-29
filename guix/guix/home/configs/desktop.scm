@@ -1,6 +1,7 @@
 (define-module (home configs desktop)
   #:use-module (gnu packages wm)
   #:use-module (gnu packages pulseaudio)
+  #:use-module (gnu packages fonts)
   #:use-module (gnu packages terminals)
   #:use-module (gnu packages web-browsers)
   #:use-module (gnu packages xdisorg)
@@ -10,9 +11,10 @@
   (list foot
         sway
         swayidle
-        swaylock
+        ;;swaylock
         wofi
         waybar
         pavucontrol
-        firefox
-        nyxt))
+        font-adobe-source-code-pro))
+        ;;firefox))
+        ;;nyxt))
