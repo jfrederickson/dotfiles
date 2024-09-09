@@ -315,13 +315,18 @@ exec swayidle -w timeout 300 'swaylock -f -i ~/.wallpapers/user-manual.jpg' \
      resume 'swaymsg "output * dpms on"' \
      before-sleep 'swaylock -f -i ~/.wallpapers/user-manual.jpg'
      
-exec_always "systemctl --user restart kanshi.service"
+#exec_always "systemctl --user restart kanshi.service"
 
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 
-bindsym XF86MonBrightnessUp exec light -A 5 && light -G | cut -d'.' -f1 > $WOBSOCK
-bindsym XF86MonBrightnessDown exec light -U 5 && light -G | cut -d'.' -f1 > $WOBSOCK
+#bindsym XF86MonBrightnessUp exec light -A 5 && light -G | cut -d'.' -f1 > $WOBSOCK
+#bindsym XF86MonBrightnessDown exec light -U 5 && light -G | cut -d'.' -f1 > $WOBSOCK
+
+bindsym $mod+F1 exec brightnessctl s 10%-
+bindsym $mod+F2 exec brightnessctl s +10%
+bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl s +10%
 
 bindsym XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $WOBSOCK
 bindsym XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $WOBSOCK
