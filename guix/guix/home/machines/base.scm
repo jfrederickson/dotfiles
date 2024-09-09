@@ -42,7 +42,7 @@
                   (bashrc
                    (list (local-file "../configs/bashrc")))))
         (service home-dbus-service-type)
-        (service home-ssh-agent-service-type)
+        ;;(service home-ssh-agent-service-type)
         (service home-pipewire-service-type)
         (service home-shepherd-service-type
                    (home-shepherd-configuration
