@@ -1,5 +1,8 @@
 ;; jfred's emacs config
 
+(defun transient-prefix-object ()
+  (or transient--prefix transient-current-prefix))
+
 ;; Custom variables
 (setq custom-file "~/.emacs.d/custom.el")
 (when (not (file-exists-p custom-file))
