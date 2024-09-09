@@ -66,7 +66,8 @@ client.background       $base07
 #output * bg /home/jfred/Pictures/wallpaper/dennoucoil.jpeg fill
 #output * bg /home/jfrederi/Pictures/wallpapers/wp5540051.jpg fill
 #output * bg /home/jfrederi/Pictures/wallpapers/Fantasy-library-art.jpg fill
-output * bg ~/.wallpapers/user-manual.jpg fill
+set $wallpaper ~/.wallpapers/frieren.jpg
+output * bg $wallpaper fill
 #
 # Example configuration:
 #
@@ -297,7 +298,7 @@ include /etc/sway/config.d/*
 
 set $ws1 "Slack"
 
-bindsym Ctrl+Alt+l exec "swaylock -i ~/.wallpapers/user-manual.jpg"
+bindsym Ctrl+Alt+l exec "swaylock -i $wallpaper"
 bindsym Ctrl+Alt+a exec "j4-dmenu-desktop --dmenu=bemenu"
 bindsym $mod+d exec "wofi --show drun"
 bindsym $mod+Shift+s "grimshot save screen"
@@ -310,10 +311,10 @@ bindsym $mod+Control+Shift+Up move workspace to output up
 # Doesn't seem to work atm
 #bindsym XF86MonBrightnessUp exec sudo light -A 10
 #bindsym XF86MonBrightnessDown exec sudo light -U 10
-exec swayidle -w timeout 300 'swaylock -f -i ~/.wallpapers/user-manual.jpg' \
+exec swayidle -w timeout 300 "swaylock -f -i $wallpaper" \
      timeout 10 'if pgrep swaylock; then swaymsg "output * dpms off"; fi' \
      resume 'swaymsg "output * dpms on"' \
-     before-sleep 'swaylock -f -i ~/.wallpapers/user-manual.jpg'
+     before-sleep "swaylock -f -i $wallpaper"
      
 #exec_always "systemctl --user restart kanshi.service"
 

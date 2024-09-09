@@ -18,7 +18,8 @@
     'wallpaper-service
     home-files-service-type
     `((".wallpapers/gnu-art.jpg" ,(local-file "../files/wallpapers/gnu-art.jpg"))
-      (".wallpapers/user-manual.jpg" ,(local-file "../files/wallpapers/user-manual.jpg"))))
+      (".wallpapers/user-manual.jpg" ,(local-file "../files/wallpapers/user-manual.jpg"))
+      (".wallpapers/frieren.jpg" ,(local-file "../files/wallpapers/frieren.jpg"))))
    (simple-service
     'foot-service
     home-xdg-configuration-files-service-type
