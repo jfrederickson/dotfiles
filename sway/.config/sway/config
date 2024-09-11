@@ -303,6 +303,9 @@ bindsym Ctrl+Alt+a exec "j4-dmenu-desktop --dmenu=bemenu"
 bindsym $mod+d exec "wofi --show drun"
 bindsym $mod+Shift+s "grimshot save screen"
 
+# Media controls
+bindsym $mod+p exec "playerctl play-pause"
+
 bindsym $mod+Control+Shift+Right move workspace to output right
 bindsym $mod+Control+Shift+Left move workspace to output left
 bindsym $mod+Control+Shift+Down move workspace to output down

@@ -15,6 +15,7 @@
         wofi
         waybar
         pavucontrol
+        playerctl
         font-adobe-source-code-pro))
         ;;firefox))
         ;;nyxt))
