@@ -303,6 +303,9 @@ bindsym Ctrl+Alt+a exec "j4-dmenu-desktop --dmenu=bemenu"
 bindsym $mod+d exec "wofi --show drun"
 bindsym $mod+Shift+s "grimshot save screen"
 
+# Media controls
+bindsym $mod+p exec "playerctl play-pause"
+
 bindsym $mod+Control+Shift+Right move workspace to output right
 bindsym $mod+Control+Shift+Left move workspace to output left
 bindsym $mod+Control+Shift+Down move workspace to output down
@@ -332,3 +335,6 @@ bindsym XF86MonBrightnessUp exec brightnessctl s +10%
 bindsym XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $WOBSOCK
 bindsym XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $WOBSOCK
 bindsym XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $WOBSOCK ) || pamixer --get-volume > $WOBSOCK
+
+exec kanshi
+exec_always "killall -HUP kanshi"

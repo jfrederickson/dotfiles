@@ -17,6 +17,7 @@
         wlr-randr
         pavucontrol
         font-adobe-source-code-pro
-        font-google-noto-emoji))
+        font-google-noto-emoji
+        playerctl))
         ;;firefox))
         ;;nyxt))
