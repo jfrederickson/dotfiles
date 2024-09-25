@@ -14,7 +14,9 @@
         ;;swaylock
         wofi
         waybar
+        wlr-randr
         pavucontrol
-        font-adobe-source-code-pro))
+        font-adobe-source-code-pro
+        font-google-noto-emoji))
         ;;firefox))
         ;;nyxt))
