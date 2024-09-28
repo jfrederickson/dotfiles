@@ -20,7 +20,6 @@
              "xdg-desktop-portal"
              "xdg-desktop-portal-wlr"
              "glibc-locales"
-             "glibc-utf8-locales-2.29"
              "nss-certs"
              "font-adobe-source-code-pro"
              "guile"
