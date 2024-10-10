@@ -10,6 +10,21 @@ exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY 
 output DSI-1 transform 270
 output DSI-1 scale 2
 
+# Some settings pulled from the Reform config that seem useful
+# start gnome xsettings daemon
+exec /usr/libexec/gsd-xsettings
+# default theme settings
+seat seat0 xcursor_theme Adwaita 24
+exec gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
+exec gsettings set org.gnome.desktop.interface font-name 'Inter Medium 11'
+exec gsettings set org.gnome.desktop.interface monospace-font-name 'Iosevka Term 11'
+exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
+exec gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
+exec gsettings set org.gnome.desktop.interface cursor-size '24'
+exec gsettings set org.gnome.gedit.preferences.editor scheme 'cobalt'
+# floating pavucontrol
+for_window [app_id="pavucontrol"] floating enable
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
