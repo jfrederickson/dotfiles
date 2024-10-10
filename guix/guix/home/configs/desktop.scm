@@ -16,6 +16,7 @@
         kanshi
         adwaita-icon-theme
         ;;swaylock
+        swaynotificationcenter
         wofi
         waybar
         wlr-randr
