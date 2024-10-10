@@ -1,5 +1,5 @@
 profile {
-        output "BenQ Corporation BenQ PD2710QC L8H0036001Q" enable mode 2560x1440 position 1920,0
+        output "BNQ BenQ PD2710QC L8H0036001Q" enable mode 2560x1440 position 1920,0
         output eDP-1 disable
 }
 
