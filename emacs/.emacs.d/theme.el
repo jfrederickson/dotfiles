@@ -62,6 +62,8 @@
   :hook (org-mode . org-bullets-mode))
 (use-package olivetti
   :hook (org-mode . olivetti-mode))
+(use-package visual-line-mode
+  :hook (org-mode . visual-line-mode))
 
 ;;(set-face-attribute 'default nil
 ;;                    :family "Miracode"
