@@ -13,6 +13,7 @@
         sway
         swayidle
         ;;swaylock
+        kanshi
         wofi
         waybar
         wlr-randr

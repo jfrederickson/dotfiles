@@ -26,3 +26,12 @@ profile {
         output "Goldstar Company Ltd LG Ultra HD 0x0000DF13" enable mode 3840x2160 position 0,0 scale 1.5
         output eDP-1 disable
 }
+
+profile "Reform - Home" {
+        output "Philips Consumer Electronics Company PHL 246V5 AU01438007831" enable mode 1920x1080 position 0,0
+        output HDMI-A-1 disable
+}
+
+profile "Reform Undocked" {
+        output HDMI-A-1 enable
+}
