@@ -1,5 +1,6 @@
 (define-module (home machines base)
   #:use-module (home services kanshi)
+  #:use-module (home packages et-book)
   #:use-module (guix gexp)
   #:use-module (gnu home)
   #:use-module (gnu packages)
@@ -13,25 +14,27 @@
   #:use-module (gnu home services shepherd))
 
 (define-public %jfred-packages
-  (map (compose list specification->package+output)
-       (list "emacs-pgtk"
-             "alsa-plugins"
-             "alsa-plugins:pulseaudio"
-             "xdg-desktop-portal"
-             "xdg-desktop-portal-wlr"
-             "glibc-locales"
-             "nss-certs"
-             "font-adobe-source-code-pro"
-             "guile"
-             "guile-goblins"
-             "grimshot"
-             "direnv"
-             "stow"
-             "git"
-             "make"
-             "sicp"
-             "gnupg"
-             "openssh")))
+  (append (list
+           font-et-book)
+          (map (compose list specification->package+output)
+               (list "emacs-pgtk"
+                     "alsa-plugins"
+                     "alsa-plugins:pulseaudio"
+                     "xdg-desktop-portal"
+                     "xdg-desktop-portal-wlr"
+                     "glibc-locales"
+                     "nss-certs"
+                     "font-adobe-source-code-pro"
+                     "guile"
+                     "guile-goblins"
+                     "grimshot"
+                     "direnv"
+                     "stow"
+                     "git"
+                     "make"
+                     "sicp"
+                     "gnupg"
+                     "openssh"))))
 
 (define-public %jfred-services
   (list (service home-bash-service-type
@@ -43,10 +46,6 @@
         (service home-dbus-service-type)
         ;;(service home-ssh-agent-service-type)
         (service home-pipewire-service-type)
-        (service home-shepherd-service-type
-                   (home-shepherd-configuration
-                    (services
-                     (list kanshi-service))))
         (simple-service 'test-config
                    home-xdg-configuration-files-service-type
                    (list `("kanshi/config"

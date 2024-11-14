@@ -30,8 +30,11 @@
              "emacs-geiser-guile"
              "emacs-org-present"
              "emacs-org-reveal"
+             "emacs-org-bullets"
+             "emacs-olivetti"
              "emacs-htmlize"
              "emacs-lispy"
              "emacs-vertico"
              "emacs-consult"
-             "emacs-emprise")))
+             "emacs-emprise"
+             "emacs-mixed-pitch")))

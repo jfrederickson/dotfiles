@@ -1,5 +1,5 @@
 profile {
-        output "BenQ Corporation BenQ PD2710QC L8H0036001Q" enable mode 2560x1440 position 1920,0
+        output "BNQ BenQ PD2710QC L8H0036001Q" enable mode 2560x1440 position 1920,0
         output eDP-1 disable
 }
 
@@ -34,4 +34,9 @@ profile "Reform - Home" {
 
 profile "Reform Undocked" {
         output HDMI-A-1 enable
+}
+
+profile {
+        output "LG Electronics LG Ultra HD 0x00042877" enable mode 3840x2160 position 0,0 scale 1.5
+        output eDP-1 disable
 }
