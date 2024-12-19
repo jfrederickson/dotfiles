@@ -12,6 +12,7 @@
              "emacs-magit"
              "emacs-all-the-icons"
              "emacs-ag"
+             "emacs-direnv"
              "emacs-editorconfig"
              "emacs-nginx-mode"
              "emacs-visual-fill-column"
