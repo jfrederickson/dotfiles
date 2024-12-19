@@ -24,7 +24,7 @@
              "emacs-exec-path-from-shell"
              "emacs-better-defaults"
              "emacs-projectile"
-             "emacs-elpy"
+             ;;"emacs-elpy"
              "emacs-yaml-mode"
              "emacs-markdown-mode"
              "emacs-terraform-mode"
