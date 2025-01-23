@@ -7,6 +7,7 @@
   #:use-module (home configs gnupg)
   #:use-module (home configs syncthing)
   #:use-module (home configs sway)
+  #:use-module (home services offlineimap)
   #:use-module (home machines base)
   #:use-module (home packages offpunk)
   #:use-module (gnu packages ebook)
@@ -28,5 +29,6 @@
   (append %jfred-services
           %jfred-home-channels
           %syncthing-services
-          %sway-config-services
-          %jfred-gnupg-services)))
+          %offlineimap-config-services
+          %sway-config-services)))
+          ;;%jfred-gnupg-services)))

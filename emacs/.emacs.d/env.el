@@ -80,19 +80,59 @@
 (setq smtpmail-smtp-service 465)
 
 
-(with-eval-after-load 'mu4e (setq mu4e-contexts
-                                  `( ,(make-mu4e-context
-                                       :name "Personal"
-                                       :enter-func (lambda () (mu4e-message "Entering Personal context"))
-                                       :leave-func (lambda () (mu4e-message "Leaving Personal context"))
-                                       ;; we match based on the contact-fields of the message
-                                       :match-func (lambda (msg)
-                                                     (when msg
-                                                       (mu4e-message-contact-field-matches msg
-                                                                                           :to "jonathan@terracrypt.net")))
-                                       :vars '( ( user-mail-address	    . "jonathan@terracrypt.net"  )
-                                                ( user-full-name	    . "Jonathan Frederickson" )
-                                                ( mu4e-compose-signature .
-                                                  (concat
-                                                   "Jonathan Frederickson\n")))))))
+;;(with-eval-after-load 'mu4e (setq mu4e-contexts
+;;                                  `( ,(make-mu4e-context
+;;                                       :name "Personal"
+;;                                       :enter-func (lambda () (mu4e-message "Entering Personal context"))
+;;                                       :leave-func (lambda () (mu4e-message "Leaving Personal context"))
+;;                                       ;; we match based on the contact-fields of the message
+;;                                       :match-func (lambda (msg)
+;;                                                     (when msg
+;;                                                       (mu4e-message-contact-field-matches msg
+;;                                                                                           :to "jonathan@terracrypt.net")))
+;;                                       :vars '( ( user-mail-address	    . "jonathan@terracrypt.net"  )
+;;                                                ( user-full-name	    . "Jonathan Frederickson" )
+;;                                                (mu4e-sent-folder . "/Terracrypt/Sent")
+;;                                                ( mu4e-compose-signature .
+;;                                                  (concat
+;;                                                   "Jonathan Frederickson\n")))))))
+
+(use-package mu4e
+  :ensure nil
+  :config
+
+  ;; Refresh mail using isync every 10 minutes
+  ;;(setq mu4e-update-interval (* 10 60))
+  ;;(setq mu4e-get-mail-command "mbsync -a")
+  (setq mu4e-maildir "~/Maildir")
+
+  (setq mu4e-contexts
+        (list
+         ;; Work account
+         (make-mu4e-context
+          :name "Personal"
+          :match-func
+            (lambda (msg)
+              (when msg
+                (string-prefix-p "/Terracrypt" (mu4e-message-field msg :maildir))))
+          :vars '((user-mail-address . "jonathan@terracrypt.net")
+                  (user-full-name    . "Jonathan Frederickson")
+                  (mu4e-drafts-folder  . "/Terracrypt/Drafts")
+                  (mu4e-sent-folder  . "/Terracrypt/Sent")
+                  (mu4e-refile-folder  . "/Terracrypt/Archive")
+                  (mu4e-trash-folder  . "/Terracrypt/Trash")))))
+
+  (setq mu4e-maildir-shortcuts
+        '(("/Terracrypt/Inbox"             . ?i)
+          ("/Terracrypt/Sent" . ?s)
+          ("/Terracrypt/Trash"     . ?t)
+          ("/Terracrypt/Drafts"    . ?d)
+          ("/Terracrypt/Archive"  . ?a))))
+
 (setq mu4e-compose-format-flowed t)
+
+(defun run-erc ()
+  (interactive)
+  (erc-tls :server "chat.sr.ht"
+           :nick "jfred"
+           :user "jfred/irc.libera.chat@pocket-erc"))

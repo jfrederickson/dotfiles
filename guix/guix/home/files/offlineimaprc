@@ -1,6 +1,6 @@
 [general]
 accounts = Terracrypt
-pythonfile = ./offlineimap.py
+pythonfile = ~/.offlineimap.py
 
 [Account Terracrypt]
 localrepository = Local
