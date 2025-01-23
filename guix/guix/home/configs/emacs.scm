@@ -4,6 +4,8 @@
 (define-public %emacs-packages
   (map (compose list specification->package+output)
        (list "emacs-guix"
+             "emacs-arei"
+             "guile-ares-rs"
              "emacs-git-link"
              "emacs-json-mode"
              "emacs-groovy-modes"
@@ -14,6 +16,9 @@
              "emacs-ag"
              "emacs-direnv"
              "emacs-editorconfig"
+             "emacs-elfeed"
+             "emacs-elfeed-goodies"
+             "emacs-elfeed-protocol"
              "emacs-nginx-mode"
              "emacs-visual-fill-column"
              "emacs-dockerfile-mode"
@@ -24,6 +29,7 @@
              "emacs-exec-path-from-shell"
              "emacs-better-defaults"
              "emacs-projectile"
+             "mu" ;; includes mu4e, I think
              ;;"emacs-elpy"
              "emacs-yaml-mode"
              "emacs-markdown-mode"
