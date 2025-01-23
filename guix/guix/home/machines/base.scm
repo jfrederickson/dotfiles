@@ -33,7 +33,7 @@
                      "git"
                      "make"
                      "sicp"
-                     "gnupg"
+                     ;;"gnupg"
                      "openssh"))))
 
 (define-public %jfred-services
@@ -44,7 +44,7 @@
                   (bashrc
                    (list (local-file "../configs/bashrc")))))
         (service home-dbus-service-type)
-        ;;(service home-ssh-agent-service-type)
+        (service home-ssh-agent-service-type)
         (service home-pipewire-service-type)
         (simple-service 'test-config
                    home-xdg-configuration-files-service-type
