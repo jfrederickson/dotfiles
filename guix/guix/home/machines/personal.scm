@@ -11,7 +11,8 @@
   #:use-module (home machines base)
   #:use-module (home packages offpunk)
   #:use-module (gnu packages ebook)
-  #:use-module (gnu packages inkscape))
+  #:use-module (gnu packages inkscape)
+  #:use-module (gnu services))
 
 (define-public %jfred-personal-packages
   (list
@@ -29,6 +30,6 @@
   (append %jfred-services
           %jfred-home-channels
           %syncthing-services
-          %offlineimap-config-services
+          (list (service mail-service-type))
           %sway-config-services)))
           ;;%jfred-gnupg-services)))
