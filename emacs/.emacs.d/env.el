@@ -73,13 +73,6 @@
 (setq git-link-open-in-browser t)
 (setq warning-minimum-level :error)
 
-;; Send mail using SMTP via mail.example.org.
-(setq smtpmail-smtp-server "smtp.fastmail.com")
-
-;; Send mail using SMTP on the mail submission port 587.
-(setq smtpmail-smtp-service 465)
-
-
 ;;(with-eval-after-load 'mu4e (setq mu4e-contexts
 ;;                                  `( ,(make-mu4e-context
 ;;                                       :name "Personal"
@@ -131,6 +124,14 @@
 
 (setq mu4e-compose-format-flowed t)
 (require 'org-re-reveal)
+
+;;(setq message-send-mail-function 'sendmail-send-it)
+
+(setq message-send-mail-function 'sendmail-send-it
+      sendmail-program "msmtp"
+      mail-specify-envelope-from t
+      message-sendmail-envelope-from 'header
+      mail-envelope-from 'header)
 
 (defun run-erc ()
   (interactive)

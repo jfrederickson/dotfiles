@@ -3,7 +3,8 @@
   #:use-module (guix gexp)
   #:use-module (gnu services)
   #:use-module (gnu packages mail)
-  #:use-module (gnu home services))
+  #:use-module (gnu home services)
+  #:use-module (gnu home services mail))
 
 (define-record-type* <mail-configuration>
   mail-configuration make-mail-configuration
@@ -19,9 +20,27 @@
            home-files-service-type
            (const
             `((".offlineimaprc" ,(local-file "../files/offlineimaprc"))
-              (".offlineimap.py" ,(local-file "../files/offlineimap.py")))))
+              (".offlineimap.py" ,(local-file "../files/offlineimap.py" #:recursive? #t)))))
           (service-extension
            home-profile-service-type
            (const (list offlineimap3)))))
    (description "jfred's mail services")
    (default-value (mail-configuration))))
+
+(define-public %mail-services
+  (list (service mail-service-type)
+        (service home-msmtp-service-type
+                 (home-msmtp-configuration
+                  (accounts
+                   (list
+                    (msmtp-account
+                     (name "default")
+                     (configuration
+                      (msmtp-configuration
+                       (host "smtp.fastmail.com")
+                       (port 465)
+                       (tls? #t)
+                       (tls-starttls? #f)
+                       (auth? #t)
+                       (user "jonathan@terracrypt.net")
+                       (password-eval "/home/jfred/.offlineimap.py"))))))))))

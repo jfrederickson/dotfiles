@@ -30,6 +30,7 @@
   (append %jfred-services
           %jfred-home-channels
           %syncthing-services
-          (list (service mail-service-type))
+          ;;(list (service mail-service-type))
+          %mail-services
           %sway-config-services)))
           ;;%jfred-gnupg-services)))
