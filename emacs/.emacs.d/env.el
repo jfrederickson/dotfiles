@@ -96,12 +96,12 @@
 
   ;; Refresh mail using isync every 10 minutes
   ;;(setq mu4e-update-interval (* 10 60))
-  ;;(setq mu4e-get-mail-command "mbsync -a")
+  (setq mu4e-get-mail-command "offlineimap")
   (setq mu4e-maildir "~/Maildir")
 
   (setq mu4e-contexts
         (list
-         ;; Work account
+         ;; Personal account
          (make-mu4e-context
           :name "Personal"
           :match-func
