@@ -1,0 +1,18 @@
+[general]
+accounts = Terracrypt
+pythonfile = ~/.offlineimap.py
+
+[Account Terracrypt]
+localrepository = Local
+remoterepository = Remote
+
+[Repository Local]
+type = Maildir
+localfolders = ~/Maildir/Terracrypt
+
+[Repository Remote]
+type = IMAP
+remotehost = imap.fastmail.com
+remoteuser = jonathan@terracrypt.net
+remotepasseval = get_password_emacs("imap.fastmail.com", "jonathan@terracrypt.net", "993")
+sslcacertfile = ~/.guix-home/profile/etc/ssl/certs/ca-certificates.crt

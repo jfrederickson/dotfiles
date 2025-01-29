@@ -7,10 +7,12 @@
   #:use-module (home configs gnupg)
   #:use-module (home configs syncthing)
   #:use-module (home configs sway)
+  #:use-module (home services offlineimap)
   #:use-module (home machines base)
   #:use-module (home packages offpunk)
   #:use-module (gnu packages ebook)
-  #:use-module (gnu packages inkscape))
+  #:use-module (gnu packages inkscape)
+  #:use-module (gnu services))
 
 (define-public %jfred-personal-packages
   (list
@@ -28,5 +30,6 @@
   (append %jfred-services
           %jfred-home-channels
           %syncthing-services
-          %sway-config-services
-          %jfred-gnupg-services)))
+          (list (service mail-service-type))
+          %sway-config-services)))
+          ;;%jfred-gnupg-services)))
