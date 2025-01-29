@@ -96,3 +96,4 @@
                                                   (concat
                                                    "Jonathan Frederickson\n")))))))
 (setq mu4e-compose-format-flowed t)
+(require 'org-re-reveal)
