@@ -62,12 +62,14 @@
 (setq mixed-pitch-set-height t)
 
 (use-package mixed-pitch-mode
-  :hook (org-mode . mixed-pitch-mode))
+  :hook (org-mode . mixed-pitch-mode)
+  :hook (markdown-mode . mixed-pitch-mode))
 
 (use-package org-bullets
   :hook (org-mode . org-bullets-mode))
 (use-package olivetti
-  :hook (org-mode . olivetti-mode))
+  :hook (org-mode . olivetti-mode)
+  :hook (markdown-mode . olivetti-mode))
 (use-package visual-line-mode
   :hook (org-mode . visual-line-mode))
 
