@@ -113,7 +113,19 @@
                   (mu4e-drafts-folder  . "/Terracrypt/Drafts")
                   (mu4e-sent-folder  . "/Terracrypt/Sent")
                   (mu4e-refile-folder  . "/Terracrypt/Archive")
-                  (mu4e-trash-folder  . "/Terracrypt/Trash")))))
+                  (mu4e-trash-folder  . "/Terracrypt/Trash")))
+         (make-mu4e-context
+          :name "Work"
+          :match-func
+            (lambda (msg)
+              (when msg
+                (string-prefix-p "/Work" (mu4e-message-field msg :maildir))))
+          :vars '((user-mail-address . "jfrederi@akamai.com")
+                  (user-full-name    . "Jonathan Frederickson")
+                  (mu4e-drafts-folder  . "/Work/Drafts")
+                  (mu4e-sent-folder  . "/Work/Sent Items")
+                  (mu4e-refile-folder  . "/Work/Archive")
+                  (mu4e-trash-folder  . "/Work/Deleted Items")))))
 
   (setq mu4e-maildir-shortcuts
         '(("/Terracrypt/Inbox"             . ?i)
