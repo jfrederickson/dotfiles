@@ -11,6 +11,12 @@
 ;;(load-theme 'cyberpunk t)
 ;;(load-theme 'one-light t)
 (load-theme 'modus-operandi t)
+(define-key global-map (kbd "<f5>") #'modus-themes-toggle)
+
+;; Modeline
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1))
 
 ;; Don't show the startup message when emacs starts
 (setq inhibit-startup-message t)
