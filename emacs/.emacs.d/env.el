@@ -7,7 +7,7 @@
 (exec-path-from-shell-copy-env "SSH_AUTH_SOCK")
 ;;(setenv "SSH_AUTH_SOCK" (shell-command-to-string "gpgconf --list-dir agent-ssh-socket"))
 
-(require 'better-defaults)
+(use-package better-defaults)
 
 ;; Enable project awareness
 (projectile-mode)
@@ -18,22 +18,26 @@
 ;; Enable my common docsets in helm-dash
 (setq helm-dash-docsets '("SaltStack" "Kubernetes" "Python 3"))
 
-;; Set up org-mode the way I want it
-(setq org-directory "~/org")
-(setq org-agenda-files (mapcar (lambda (x) (concat org-directory x)) '("/Inbox.org" "/Next.org" "/Someday.org" "/Recurring.org")))
-(setq org-refiles-jfred (mapcar (lambda (x) (concat org-directory x)) '("/Inbox.org" "/Next.org" "/Someday.org" "/Complete.org" "/Recurring.org")))
-(setq org-refile-targets '((org-refiles-jfred :maxlevel . 1)))
-(setq org-outline-path-complete-in-steps nil)
-(setq org-default-notes-file (concat org-directory "/Inbox.org"))
-(setq org-capture-templates
-      '(("t" "Todo" entry (file "~/org/Inbox.org")
-         "* TODO %?\n  %a")
-        ("tn" "Todo - no link" entry (file "~/org/inbox.org")
-         "* TODO %?")
-        ("j" "Journal" entry (file+olp+datetree "~/org/journal.org")
-         "* %?\nEntered on %U\n  %i\n  %a")
-        ("m" "Meeting Notes" entry (file+olp+datetree "~/org/meetings.org")
-         "* Meeting Notes - %?")))
+(use-package org
+  :mode (("\\.org$" . org-mode))
+  :config
+  (progn
+  ;; Set up org-mode the way I want it
+    (setq org-directory "~/org")
+    (setq org-agenda-files (mapcar (lambda (x) (concat org-directory x)) '("/Inbox.org" "/Next.org" "/Someday.org" "/Recurring.org")))
+    (setq org-refiles-jfred (mapcar (lambda (x) (concat org-directory x)) '("/Inbox.org" "/Next.org" "/Someday.org" "/Complete.org" "/Recurring.org")))
+    (setq org-refile-targets '((org-refiles-jfred :maxlevel . 1)))
+    (setq org-outline-path-complete-in-steps nil)
+    (setq org-default-notes-file (concat org-directory "/Inbox.org"))
+    (setq org-capture-templates
+          '(("t" "Todo" entry (file "~/org/Inbox.org")
+             "* TODO %?\n  %a")
+            ("tn" "Todo - no link" entry (file "~/org/inbox.org")
+             "* TODO %?")
+            ("j" "Journal" entry (file+olp+datetree "~/org/journal.org")
+             "* %?\nEntered on %U\n  %i\n  %a")
+            ("m" "Meeting Notes" entry (file+olp+datetree "~/org/meetings.org")
+             "* Meeting Notes - %?")))))
 
 ;; Window transparency
 (set-frame-parameter (selected-frame) 'alpha-background 80)
@@ -92,6 +96,7 @@
 
 (use-package mu4e
   :ensure nil
+  :commands 'mu4e
   :config
 
   ;; Refresh mail using isync every 10 minutes
@@ -132,10 +137,12 @@
           ("/Terracrypt/Sent" . ?s)
           ("/Terracrypt/Trash"     . ?t)
           ("/Terracrypt/Drafts"    . ?d)
-          ("/Terracrypt/Archive"  . ?a))))
+          ("/Terracrypt/Archive"  . ?a)))
 
-(setq mu4e-compose-format-flowed t)
-(require 'org-re-reveal)
+  (setq mu4e-compose-format-flowed t))
+
+(use-package org-re-reveal
+  :after 'org-mode)
 
 ;;(setq message-send-mail-function 'sendmail-send-it)
 
@@ -150,3 +157,27 @@
   (erc-tls :server "chat.sr.ht"
            :nick "jfred"
            :user "jfred/irc.libera.chat@pocket-erc"))
+
+(use-package elfeed
+  :commands 'elfeed
+  :config
+  (progn
+;; TODO Add netrc to elfeed-curl-extra-arguments
+;; https://old.reddit.com/r/emacs/comments/8mcpd9/elegant_way_to_provide_encrypted_credentials_to/dzml1hu/
+;; And get CA cert stuff working with curl backend
+    (setq elfeed-use-curl nil)))
+
+(use-package elfeed-protocol
+  :after 'elfeed
+  :config
+  (progn
+    (setq elfeed-protocol-ttrss-maxsize 200) ;; bigger than 200 is invalid
+    (setq elfeed-protocol-feeds
+          '(
+            ("ttrss+https://sandstorm@api-c12c97900b429f1a6192f5f294010f3b.sandstorm.terracrypt.net"
+             :use-authinfo t
+             )))
+
+    (setq elfeed-protocol-enabled-protocols '(ttrss))
+
+    (elfeed-protocol-enable)))
