@@ -27,6 +27,7 @@
     (setq org-agenda-files (mapcar (lambda (x) (concat org-directory x)) '("/Inbox.org" "/Next.org" "/Someday.org" "/Recurring.org")))
     (setq org-refiles-jfred (mapcar (lambda (x) (concat org-directory x)) '("/Inbox.org" "/Next.org" "/Someday.org" "/Complete.org" "/Recurring.org")))
     (setq org-refile-targets '((org-refiles-jfred :maxlevel . 1)))
+    (setq org-refile-use-outline-path 'file)
     (setq org-outline-path-complete-in-steps nil)
     (setq org-default-notes-file (concat org-directory "/Inbox.org"))
     (setq org-capture-templates
@@ -103,6 +104,9 @@
   ;;(setq mu4e-update-interval (* 10 60))
   (setq mu4e-get-mail-command "offlineimap")
   (setq mu4e-maildir "~/Maildir")
+
+  (define-key mu4e-headers-mode-map (kbd "C-c c") 'mu4e-org-store-and-capture)
+  (define-key mu4e-view-mode-map    (kbd "C-c c") 'mu4e-org-store-and-capture)
 
   (setq mu4e-contexts
         (list
