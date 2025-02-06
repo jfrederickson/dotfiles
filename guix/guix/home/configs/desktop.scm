@@ -6,8 +6,8 @@
   #:use-module (gnu packages fonts)
   #:use-module (gnu packages terminals)
   #:use-module (gnu packages web-browsers)
-  #:use-module (gnu packages xdisorg)
-  #:use-module (nongnu packages mozilla))
+  #:use-module (gnu packages xdisorg))
+  ;;#:use-module (nongnu packages mozilla))
 
 (define-public %jfred-desktop-packages
   (list foot

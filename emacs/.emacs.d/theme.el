@@ -11,6 +11,12 @@
 ;;(load-theme 'cyberpunk t)
 ;;(load-theme 'one-light t)
 (load-theme 'modus-operandi t)
+(define-key global-map (kbd "<f5>") #'modus-themes-toggle)
+
+;; Modeline
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1))
 
 ;; Don't show the startup message when emacs starts
 (setq inhibit-startup-message t)
@@ -56,12 +62,14 @@
 (setq mixed-pitch-set-height t)
 
 (use-package mixed-pitch-mode
-  :hook (org-mode . mixed-pitch-mode))
+  :hook (org-mode . mixed-pitch-mode)
+  :hook (markdown-mode . mixed-pitch-mode))
 
 (use-package org-bullets
   :hook (org-mode . org-bullets-mode))
 (use-package olivetti
-  :hook (org-mode . olivetti-mode))
+  :hook (org-mode . olivetti-mode)
+  :hook (markdown-mode . olivetti-mode))
 (use-package visual-line-mode
   :hook (org-mode . visual-line-mode))
 

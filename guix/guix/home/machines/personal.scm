@@ -7,16 +7,22 @@
   #:use-module (home configs gnupg)
   #:use-module (home configs syncthing)
   #:use-module (home configs sway)
+  #:use-module (home services offlineimap)
   #:use-module (home machines base)
   #:use-module (home packages offpunk)
   #:use-module (gnu packages ebook)
-  #:use-module (gnu packages inkscape))
+  #:use-module (gnu packages inkscape)
+  #:use-module (gnu packages password-utils)
+  #:use-module (gnu packages gnome)
+  #:use-module (gnu services))
 
 (define-public %jfred-personal-packages
   (list
    ;;calibre
    ;;inkscape
-   offpunk))
+   offpunk
+   keepassxc
+   libsecret))
 
 (home-environment
  (packages
@@ -28,5 +34,7 @@
   (append %jfred-services
           %jfred-home-channels
           %syncthing-services
-          %sway-config-services
-          %jfred-gnupg-services)))
+          ;;(list (service mail-service-type))
+          %mail-services
+          %sway-config-services)))
+          ;;%jfred-gnupg-services)))
