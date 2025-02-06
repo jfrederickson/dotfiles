@@ -136,6 +136,20 @@
                   (mu4e-refile-folder  . "/Work/Archive")
                   (mu4e-trash-folder  . "/Work/Deleted Items")))))
 
+  (setq mu4e-bookmarks
+        '(( :name  "Unread messages in inbox"
+            :query "flag:unread AND NOT flag:trashed AND maildir:/Terracrypt/Inbox"
+            :key ?u)
+          ( :name "Today's messages"
+            :query "date:today..now"
+            :key ?t)
+          ( :name "Last 7 days"
+            :query "date:7d..now"
+            :hide-unread t
+            :key ?w)
+          ( :name "Messages with images"
+            :query "mime:image/*"
+            :key ?p)))
   (setq mu4e-maildir-shortcuts
         '(("/Terracrypt/Inbox"             . ?i)
           ("/Terracrypt/Sent" . ?s)
