@@ -1,10 +1,20 @@
 (define-module (home services offlineimap)
+  #:use-module (guix packages)
   #:use-module (guix records)
   #:use-module (guix gexp)
   #:use-module (gnu services)
   #:use-module (gnu packages mail)
+  #:use-module (gnu packages python)
+  #:use-module (gnu packages python-crypto)
   #:use-module (gnu home services)
   #:use-module (gnu home services mail))
+
+(define offlineimap-with-keyring
+  (package
+   (inherit offlineimap3)
+   (inputs (modify-inputs
+            (package-inputs offlineimap3)
+            (append python-keyring)))))
 
 (define-record-type* <mail-configuration>
   mail-configuration make-mail-configuration
@@ -23,7 +33,7 @@
               (".offlineimap.py" ,(local-file "../files/offlineimap.py" #:recursive? #t)))))
           (service-extension
            home-profile-service-type
-           (const (list offlineimap3)))))
+           (const (list offlineimap-with-keyring)))))
    (description "jfred's mail services")
    (default-value (mail-configuration))))
 

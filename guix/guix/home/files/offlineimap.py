@@ -1,13 +1,8 @@
 #!/usr/bin/env python3
-import re, os
+import keyring
 
-def get_password_emacs(machine, login, port):
-    s = "machine %s login %s port %s password ([^ ]*)\n" % (machine, login, port)
-    p = re.compile(s)
-    with open(os.path.expanduser("~/.authinfo")) as f:
-        authinfo = f.read()
-    #authinfo = os.popen("gpg -q --no-tty -d ~/.authinfo.gpg").read()
-    return p.search(authinfo).group(1)
+def get_password_keyring(service, username):
+    return keyring.get_password(service, username)
 
 if __name__ == "__main__":
-    print(get_password_emacs("imap.fastmail.com", "jonathan@terracrypt.net", "993"))
+    print(keyring.get_password("email", "jonathan@terracrypt.net"))

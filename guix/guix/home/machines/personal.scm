@@ -12,13 +12,17 @@
   #:use-module (home packages offpunk)
   #:use-module (gnu packages ebook)
   #:use-module (gnu packages inkscape)
+  #:use-module (gnu packages password-utils)
+  #:use-module (gnu packages gnome)
   #:use-module (gnu services))
 
 (define-public %jfred-personal-packages
   (list
    ;;calibre
    ;;inkscape
-   offpunk))
+   offpunk
+   keepassxc
+   libsecret))
 
 (home-environment
  (packages

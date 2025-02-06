@@ -14,5 +14,5 @@ localfolders = ~/Maildir/Terracrypt
 type = IMAP
 remotehost = imap.fastmail.com
 remoteuser = jonathan@terracrypt.net
-remotepasseval = get_password_emacs("imap.fastmail.com", "jonathan@terracrypt.net", "993")
+remotepasseval = get_password_keyring("email", "jonathan@terracrypt.net")
 sslcacertfile = ~/.guix-home/profile/etc/ssl/certs/ca-certificates.crt
