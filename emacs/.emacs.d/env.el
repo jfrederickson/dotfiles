@@ -124,6 +124,18 @@
                   (mu4e-refile-folder  . "/Terracrypt/Archive")
                   (mu4e-trash-folder  . "/Terracrypt/Trash")))
          (make-mu4e-context
+          :name "Hive76"
+          :match-func
+          (lambda (msg)
+            (when msg
+              (string-prefix-p "/Hive76" (mu4e-message-field msg :maildir))))
+          :vars '((user-mail-address . "jfred@hive76.org")
+                  (user-full-name . "Jonathan Frederickson")
+                  (mu4e-drafts-folder . "/Hive76/Drafts")
+                  (mu4e-sent-folder . "/Hive76/[Gmail].Sent Mail")
+                  (mu4e-refile-folder . "/Hive76/[Gmail].All Mail")
+                  (mu4e-trash-folder . "/Hive76/[Gmail].Trash")))
+         (make-mu4e-context
           :name "Work"
           :match-func
             (lambda (msg)
@@ -138,24 +150,25 @@
 
   (setq mu4e-bookmarks
         '(( :name  "Unread messages in inbox"
-            :query "flag:unread AND NOT flag:trashed AND maildir:/Terracrypt/Inbox"
+            :query "flag:unread AND NOT flag:trashed AND (maildir:/Terracrypt/Inbox OR maildir:/Hive76/INBOX)"
             :key ?u)
+          ( :name "All messages in inboxes"
+            :query "maildir:/Terracrypt/Inbox OR maildir:/Hive76/INBOX"
+            :key ?i)
           ( :name "Today's messages"
             :query "date:today..now"
             :key ?t)
           ( :name "Last 7 days"
             :query "date:7d..now"
             :hide-unread t
-            :key ?w)
-          ( :name "Messages with images"
-            :query "mime:image/*"
-            :key ?p)))
+            :key ?w)))
   (setq mu4e-maildir-shortcuts
         '(("/Terracrypt/Inbox"             . ?i)
           ("/Terracrypt/Sent" . ?s)
           ("/Terracrypt/Trash"     . ?t)
           ("/Terracrypt/Drafts"    . ?d)
-          ("/Terracrypt/Archive"  . ?a)))
+          ("/Terracrypt/Archive"  . ?a)
+          ("/Hive76/INBOX" . ?h)))
 
   (setq mu4e-compose-format-flowed t))
 

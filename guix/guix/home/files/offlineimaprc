@@ -1,5 +1,5 @@
 [general]
-accounts = Terracrypt
+accounts = Terracrypt, Hive76
 pythonfile = ~/.offlineimap.py
 
 [Account Terracrypt]
@@ -16,3 +16,19 @@ remotehost = imap.fastmail.com
 remoteuser = jonathan@terracrypt.net
 remotepasseval = get_password_keyring("email", "jonathan@terracrypt.net")
 sslcacertfile = ~/.guix-home/profile/etc/ssl/certs/ca-certificates.crt
+
+[Account Hive76]
+localrepository = HiveLocal
+remoterepository = HiveRemote
+
+[Repository HiveLocal]
+type = Maildir
+localfolders = ~/Maildir/Hive76
+
+[Repository HiveRemote]
+type = Gmail
+remoteuser = jfred@hive76.org
+remotepasseval = get_password_keyring("email", "jfred@hive76.org")
+sslcacertfile = ~/.guix-home/profile/etc/ssl/certs/ca-certificates.crt
+
+
