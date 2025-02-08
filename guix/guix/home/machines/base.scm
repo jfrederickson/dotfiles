@@ -27,6 +27,7 @@
                      "font-adobe-source-code-pro"
                      "guile"
                      "guile-goblins"
+                     "guile-hoot"
                      "grimshot"
                      "direnv"
                      "stow"
