@@ -53,4 +53,4 @@
                        (tls-starttls? #f)
                        (auth? #t)
                        (user "jonathan@terracrypt.net")
-                       (password-eval "/home/jfred/.offlineimap.py"))))))))))
+                       (password-eval "keyring get email jonathan@terracrypt.net"))))))))))

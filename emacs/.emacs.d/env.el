@@ -167,7 +167,6 @@
           ("/Terracrypt/Sent" . ?s)
           ("/Terracrypt/Trash"     . ?t)
           ("/Terracrypt/Drafts"    . ?d)
-          ("/Terracrypt/Archive"  . ?a)
           ("/Hive76/INBOX" . ?h)))
 
   (setq mu4e-compose-format-flowed t))
