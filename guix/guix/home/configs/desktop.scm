@@ -23,6 +23,8 @@
         pavucontrol
         font-adobe-source-code-pro
         font-google-noto-emoji
+        font-google-material-design-icons
+        font-awesome
         playerctl))
         ;;firefox))
         ;;nyxt))
