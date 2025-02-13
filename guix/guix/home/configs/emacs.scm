@@ -9,6 +9,7 @@
              "emacs-git-link"
              "emacs-json-mode"
              "emacs-groovy-modes"
+             "emacs-go-mode"
              "emacs-jenkinsfile-mode"
              "emacs-jabber"
              "emacs-magit"
