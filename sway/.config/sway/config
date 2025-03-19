@@ -136,6 +136,10 @@ input "1133:45085:Logitech_MX_Ergo_Multi-Device_Trackball" {
       pointer_accel 0.75
 }
 
+input "20547:23622:Ploopy_Corporation_Thumb_Trackball_System_Control" {
+      pointer_accel 0.75
+}
+
 input type:keyboard {
   # Capslock key should work as escape key
   # See /usr/share/X11/xkb/rules/xorg.lst for options
