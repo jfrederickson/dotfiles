@@ -13,6 +13,7 @@
   #:use-module (gnu packages ebook)
   #:use-module (gnu packages inkscape)
   #:use-module (gnu packages password-utils)
+  #:use-module (gnu packages game-development)
   #:use-module (gnu packages gnome)
   #:use-module (gnu services))
 
@@ -22,6 +23,7 @@
    ;;inkscape
    offpunk
    keepassxc
+   libresprite
    libsecret))
 
 (home-environment
