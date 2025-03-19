@@ -8,6 +8,7 @@
              "guile-ares-rs"
              "emacs-git-link"
              "emacs-json-mode"
+             "emacs-typescript-mode"
              "emacs-groovy-modes"
              "emacs-jenkinsfile-mode"
              "emacs-jabber"
