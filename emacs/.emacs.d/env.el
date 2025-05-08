@@ -40,6 +40,8 @@
             ("m" "Meeting Notes" entry (file+olp+datetree "~/org/meetings.org")
              "* Meeting Notes - %?")))))
 
+(setq org-agenda-include-diary t)
+
 ;; Window transparency
 (set-frame-parameter (selected-frame) 'alpha-background 80)
 ;;(add-to-list 'default-frame-alist '(alpha . (90 . 90)))
