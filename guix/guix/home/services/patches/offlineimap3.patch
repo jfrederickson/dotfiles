@@ -1,0 +1,27 @@
+commit 4c64d72882925238c94047120314a0a3209364d0
+Author: Tugdual Saunier <tugdual.saunier@gmail.com>
+
+    fix: "module importlib has no attribute 'machinery'"
+
+    Since the merge of #190, the following errors happens:
+    ```
+    ERROR: module 'importlib' has no attribute 'machinery'
+    ERROR: Exceptions occurred during the run!
+    ERROR: AttributeError: module 'importlib' has no attribute 'machinery'
+    ```
+    This commit should fix this by importing the required package.
+
+diff --git a/offlineimap/localeval.py b/offlineimap/localeval.py
+index 3b137e0..286657f 100644
+--- a/offlineimap/localeval.py
++++ b/offlineimap/localeval.py
+@@ -26,6 +26,8 @@ class LocalEval:
+         self.namespace = {}
+
+         if path is not None:
++            import importlib.machinery
++
+             # FIXME: limit opening files owned by current user with rights set
+             # to fixed mode 644.
+             importlib.machinery.SOURCE_SUFFIXES.append('') # empty string to 
+allow any file

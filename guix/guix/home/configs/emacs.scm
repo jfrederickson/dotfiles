@@ -9,6 +9,7 @@
              "guile-ares-rs"
              "emacs-git-link"
              "emacs-json-mode"
+             "emacs-typescript-mode"
              "emacs-jsonnet-mode"
              "emacs-groovy-modes"
              "emacs-go-mode"

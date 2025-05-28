@@ -106,6 +106,7 @@
   ;;(setq mu4e-update-interval (* 10 60))
   (setq mu4e-get-mail-command "offlineimap")
   (setq mu4e-maildir "~/Maildir")
+  (setq message-confirm-send t)
 
   (define-key mu4e-headers-mode-map (kbd "C-c c") 'mu4e-org-store-and-capture)
   (define-key mu4e-view-mode-map    (kbd "C-c c") 'mu4e-org-store-and-capture)

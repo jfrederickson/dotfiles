@@ -1,6 +1,7 @@
 (define-module (home services offlineimap)
   #:use-module (guix packages)
   #:use-module (guix records)
+  #:use-module (guix transformations)
   #:use-module (guix gexp)
   #:use-module (gnu services)
   #:use-module (gnu packages mail)
@@ -9,9 +10,14 @@
   #:use-module (gnu home services)
   #:use-module (gnu home services mail))
 
+(define offlineimap-patched
+  ((options->transformation
+      (list `(with-patch . "offlineimap3=home/services/patches/offlineimap3.patch")))
+     offlineimap3))
+
 (define offlineimap-with-keyring
   (package
-   (inherit offlineimap3)
+   (inherit offlineimap-patched)
    (inputs (modify-inputs
             (package-inputs offlineimap3)
             (append python-keyring)))))
