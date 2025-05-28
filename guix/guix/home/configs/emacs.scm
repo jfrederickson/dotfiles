@@ -5,6 +5,7 @@
   (map (compose list specification->package+output)
        (list "emacs-guix"
              "emacs-arei"
+             "emacs-auctex"
              "guile-ares-rs"
              "emacs-git-link"
              "emacs-json-mode"
@@ -48,4 +49,5 @@
              "emacs-vertico"
              "emacs-consult"
              "emacs-emprise"
+             "emacs-excorporate"
              "emacs-mixed-pitch")))
