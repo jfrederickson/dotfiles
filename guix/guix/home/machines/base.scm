@@ -22,6 +22,7 @@
                      "alsa-plugins:pulseaudio"
                      "xdg-desktop-portal"
                      "xdg-desktop-portal-wlr"
+                     "xdg-desktop-portal-gtk"
                      "glibc-locales"
                      "nss-certs"
                      "font-adobe-source-code-pro"
