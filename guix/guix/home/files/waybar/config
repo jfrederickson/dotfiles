@@ -9,8 +9,8 @@
     // "width": 1366, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["custom/notification", "pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock", "idle_inhibitor"],
+    "modules-center": [],
+    "modules-right": ["custom/notification", "pulseaudio", "cpu", "memory", "battery", "tray", "clock", "idle_inhibitor"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -36,6 +36,7 @@
         "spacing": 10
     },
     "clock": {
+        "format": "{:%I:%M %p}",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
