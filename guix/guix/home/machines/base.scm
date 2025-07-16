@@ -29,6 +29,7 @@
                      "guile"
                      "guile-goblins"
                      "guile-hoot"
+                     "guile-hall"
                      "g-golf"
                      "grimshot"
                      "direnv"
