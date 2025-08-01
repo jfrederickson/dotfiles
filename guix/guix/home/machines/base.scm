@@ -35,6 +35,7 @@
                      "git"
                      "make"
                      "sicp"
+                     "senpai"
                      ;;"gnupg"
                      "openssh"))))
 

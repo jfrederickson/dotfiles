@@ -33,6 +33,7 @@
              "emacs-doom-modeline"
              "emacs-exec-path-from-shell"
              "emacs-better-defaults"
+             "emacs-paredit"
              "emacs-projectile"
              "mu" ;; includes mu4e, I think
              ;;"emacs-elpy"
