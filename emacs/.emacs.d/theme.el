@@ -15,7 +15,6 @@
 
 ;; Modeline
 (use-package doom-modeline
-  :ensure t
   :init (doom-modeline-mode 1))
 
 ;; Don't show the startup message when emacs starts
