@@ -29,7 +29,7 @@
                      "guile"
                      "guile-goblins"
                      "guile-hoot"
-                     "senpai"
+                     ;;"senpai" ;; temporarily disabled (build failure)
                      "guile-hall"
                      "g-golf"
                      "grimshot"
@@ -38,7 +38,6 @@
                      "git"
                      "make"
                      "sicp"
-                     "senpai"
                      ;;"gnupg"
                      "openssh"))))
 
