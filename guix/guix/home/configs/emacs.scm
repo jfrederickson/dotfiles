@@ -5,6 +5,7 @@
   (map (compose list specification->package+output)
        (list "emacs-guix"
              "emacs-arei"
+             "emacs-auctex"
              "guile-ares-rs"
              "emacs-eat"
              "emacs-git-link"
@@ -33,6 +34,7 @@
              "emacs-doom-modeline"
              "emacs-exec-path-from-shell"
              "emacs-better-defaults"
+             "emacs-paredit"
              "emacs-projectile"
              "mu" ;; includes mu4e, I think
              ;;"emacs-elpy"
@@ -50,4 +52,5 @@
              "emacs-vertico"
              "emacs-consult"
              "emacs-emprise"
+             "emacs-excorporate"
              "emacs-mixed-pitch")))

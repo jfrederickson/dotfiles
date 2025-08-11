@@ -1,5 +1,6 @@
 ;;(setq python-shell-interpreter "/usr/local/bin/python3")
-(setq python-shell-interpreter "/home/jfrederi/.pyenv/shims/python")
+;;(setq python-shell-interpreter "/home/jfrederi/.pyenv/shims/python")
+(setq python-shell-interpreter "/usr/bin/python3")
 ;;(setq jedi:environment-virtualenv
 ;;      (list "/Users/jfrederickson/Library/Python/3.7/bin/virtualenv" "--system-site-packages"))
 ;;(setq elpy-rpc-virtualenv-path "/Users/jfrederickson/Library/Python/3.7/bin/virtualenv")

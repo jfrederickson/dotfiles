@@ -22,6 +22,7 @@
                      "alsa-plugins:pulseaudio"
                      "xdg-desktop-portal"
                      "xdg-desktop-portal-wlr"
+                     "xdg-desktop-portal-gtk"
                      "glibc-locales"
                      "nss-certs"
                      "font-adobe-source-code-pro"
@@ -29,12 +30,15 @@
                      "guile-goblins"
                      "guile-hoot"
                      "senpai"
+                     "guile-hall"
+                     "g-golf"
                      "grimshot"
                      "direnv"
                      "stow"
                      "git"
                      "make"
                      "sicp"
+                     "senpai"
                      ;;"gnupg"
                      "openssh"))))
 
