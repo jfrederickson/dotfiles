@@ -28,6 +28,7 @@
                      "guile"
                      "guile-goblins"
                      "guile-hoot"
+                     "senpai"
                      "grimshot"
                      "direnv"
                      "stow"
