@@ -18,6 +18,7 @@
         ;;swaylock
         swaynotificationcenter
         wofi
+        fuzzel
         waybar
         wlr-randr
         pavucontrol
