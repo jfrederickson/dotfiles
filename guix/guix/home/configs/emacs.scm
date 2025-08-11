@@ -6,6 +6,7 @@
        (list "emacs-guix"
              "emacs-arei"
              "guile-ares-rs"
+             "emacs-eat"
              "emacs-git-link"
              "emacs-json-mode"
              "emacs-typescript-mode"

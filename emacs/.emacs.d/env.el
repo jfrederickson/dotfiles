@@ -244,3 +244,7 @@
 (setq auth-sources '(default
                      "secrets:app-secrets"
                      "~/.authinfo"))
+
+;; Speedup for eat/comint modes
+(setq process-adaptive-read-buffering nil)
+(setq read-process-output-max (* 4 1024 1024))
