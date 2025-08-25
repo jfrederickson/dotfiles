@@ -16,6 +16,7 @@
              "emacs-go-mode"
              "emacs-jenkinsfile-mode"
              "emacs-jabber"
+             "emacs-ledger-mode"
              "emacs-magit"
              "emacs-nix-mode"
              "emacs-all-the-icons"

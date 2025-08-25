@@ -45,6 +45,7 @@
                      "git"
                      "make"
                      "sicp"
+                     "ledger"
                      ;;"gnupg"
                      "openssh"))))
 
