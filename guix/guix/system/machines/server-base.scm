@@ -2,6 +2,7 @@
   #:use-module (srfi srfi-1)
   #:use-module (guix gexp)
   #:use-module (gnu)
+  #:use-module (gnu system)
   #:use-module (gnu packages wm)
   #:use-module (gnu services xorg)
   #:use-module (gnu services desktop)
@@ -12,29 +13,19 @@
   #:use-module (gnu services ssh)
   #:use-module (system machines base))
 
-(define (jfred-append-base-services base)
-  (modify-services base
-    (guix-service-type config =>
-                       (guix-configuration
-                        (inherit config)
-                        ;; Fetch substitutes from example.org.
-                        (substitute-urls
-                          (list "https://substitutes.nonguix.org"
-                                "https://ci.guix.gnu.org"
-                                "https://bordeaux.guix.gnu.org"))
-                        (authorized-keys
-                         (append (list (local-file "../keyring/terracard.pub")
-                                       (local-file "../keyring/wired.pub"))
-                                 %default-authorized-guix-keys))))))
-
-(define-public jfred-desktop-base-system
+(define-public jfred-server-base-system
   (operating-system
    ;; Set these in hardware-configuration.scm
    (bootloader #f)
    (host-name #f)
    (file-systems #f)
+   (sudoers-file
+     (plain-file "sudoers"
+                 (string-append (plain-file-content %sudoers-specification)
+                                (format #f "~a ALL = NOPASSWD: ALL~%"
+                                        "jfred"))))
 
-   ;; Base configs for my desktop systems
+   ;; Base configs for my servers
    (locale "en_US.utf8")
    (keyboard-layout (keyboard-layout "us"))
    (timezone "America/New_York")
@@ -49,11 +40,13 @@
 
    (services
    (append (list
-            (service screen-locker-service-type
-                     (screen-locker-configuration
-                      (name "swaylock")
-                      (program (file-append swaylock "/bin/swaylock"))
-                      (using-setuid? #f)
-                      (using-pam? #t)))
-            (service pcscd-service-type))
-           (jfred-append-base-services %base-services))))
+            (service openssh-service-type
+                     (openssh-configuration
+                      (use-pam? #f)))
+            (service elogind-service-type)
+            (service dhcpcd-service-type)
+            (service dbus-root-service-type)
+            (service docker-service-type)
+            (service containerd-service-type)
+            (service ntp-service-type))
+           (jfred-append-base-services %base-services)))))
