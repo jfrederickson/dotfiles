@@ -12,6 +12,7 @@
   #:use-module (home packages offpunk)
   #:use-module (gnu packages ebook)
   #:use-module (gnu packages inkscape)
+  #:use-module (gnu packages luanti)
   #:use-module (gnu packages password-utils)
   #:use-module (gnu packages game-development)
   #:use-module (gnu packages gnome)
@@ -24,6 +25,8 @@
    offpunk
    keepassxc
    libresprite
+   luanti
+   minetest-game
    libsecret))
 
 (home-environment
