@@ -208,3 +208,7 @@
           (frame-parameters . ((undecorated . t)))))))
 
 (global-set-key (kbd "C-;") 'er/expand-region)
+
+(add-hook 'ledger-mode-hook
+          (lambda ()
+            (setq-local tab-always-indent 'complete)))
