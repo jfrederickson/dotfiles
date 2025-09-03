@@ -9,6 +9,7 @@
        (configuration (machine-ssh-configuration
                        (host-name "wired.jfred.home")
                        (system "x86_64-linux")
+                       (build-locally? #f)
                        (user "jfred")
                        (identity "~/.ssh/id_rsa")
                        (host-key "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO2YQajUExNyT6WWtnOg784/aihdwMnRYoOxz/jEHSQi root@(none)")
